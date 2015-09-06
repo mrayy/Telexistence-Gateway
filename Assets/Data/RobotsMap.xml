@@ -1,0 +1,27 @@
+<Robots>
+  <Robot Name="Torso2" IP="192.168.11.36"/>
+  <Robot Name="Local" IP="127.0.0.1"/>
+  <Robot Name="Telubee" IP="192.168.11.3"/>
+  <Robot Name="Torso" IP="192.168.10.63"/>
+  <Robot Name="LivingLab Tokyo" IP="192.168.10.47"/>
+  <Robot Name="Robomech" Location="Robomech - Kyoto" IP="192.168.100.103"/>
+  <Robot Name="SIGGRAPH Asia" IP="192.168.10.22"/>
+  <Robot Name="TelubeeOld" IP="192.168.10.84"/>
+  <Robot Name="TelubeeKMD" IP="192.168.11.4"/>
+  <!--
+  <Robot Name="FlyingTelubeeTexap" IP="192.168.11.3"/>
+  <Robot Name="FlyingTelubeeTachilab" IP="192.168.10.75"/>
+  <Robot Name="Internet" IP="123.198.7.19"/>
+  <Robot Name="MAC" IP="192.168.10.23"/>
+  <Robot Name="KMD" IP="131.113.137.12"/>
+  <Robot Name="Remote" IP="192.168.11.2"/>
+  <Robot Name="Remote" IP="192.168.10.56"/>
+  <Robot Name="Remote" IP="131.113.137.218"/>
+  <Robot Name="Remote" IP="210.174.11.155"/>
+  <Robot Name="Remote" IP="192.168.20.102"/>
+
+  <Robot Name="RemoteWide" IP="203.178.132.23"/>
+  -->
+
+</Robots>
+  
