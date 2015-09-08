@@ -26,6 +26,8 @@ public class GstNetworkPlayer:IGstPlayer  {
 	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
 	extern static private void mray_gst_netPlayerBlitImage(System.IntPtr p, System.IntPtr _TextureNativePtr, int _UnityTextureWidth, int _UnityTextureHeight);
 	
+	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
+	extern static private int mray_gst_netPlayerFrameCount(System.IntPtr p);
 
 	public Vector2 FrameSize
 	{
@@ -36,7 +38,11 @@ public class GstNetworkPlayer:IGstPlayer  {
 			return new Vector2(w,h);
 		}
 	}
-
+	
+	public override int GetCaptureRate (int index)
+	{
+		return mray_gst_netPlayerFrameCount (m_Instance);
+	}
 	public GstNetworkPlayer()
 	{
 		m_Instance = mray_gst_createNetworkPlayer();	

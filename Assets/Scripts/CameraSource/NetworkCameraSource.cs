@@ -8,7 +8,11 @@ public class NetworkCameraSource : ICameraSource {
 	public string Host = "127.0.0.1";
 	public int port=7000;
 	public bool isStereo = false;
-
+	
+	public GstBaseTexture GetBaseTexture()
+	{
+		return m_Texture;
+	}
 	public void Init()
 	{
 		m_Texture= TargetNode.AddComponent<GstNetworkTexture> ();
@@ -25,6 +29,8 @@ public class NetworkCameraSource : ICameraSource {
 	}
 	public Texture GetEyeTexture(EyeName e)
 	{
+		if (m_Texture == null || m_Texture.PlayerTexture == null)
+			return null;
 		return m_Texture.PlayerTexture[0];
 	}
 	

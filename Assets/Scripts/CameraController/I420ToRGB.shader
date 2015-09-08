@@ -4,6 +4,9 @@
 	}
 	SubShader {
 		Pass{
+			ZTest Always Cull Off ZWrite Off
+			Fog { Mode off }
+			
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
@@ -25,11 +28,11 @@
 
 
 			// YUV offset (reciprocals of 255 based offsets above)
-			const half3 offset = half3(-0.0625, -0.5, -0.5);
+			// half3 offset = half3(-0.0625, -0.5, -0.5);
 			// RGB coefficients 
-			const half3 rCoeff = half3(1.164,  0.000,  1.596);
-			const half3 gCoeff = half3(1.164, -0.391, -0.813);
-			const half3 bCoeff = half3(1.164,  2.018,  0.000);
+			// half3 rCoeff = half3(1.164,  0.000,  1.596);
+			// half3 gCoeff = half3(1.164, -0.391, -0.813);
+			// half3 bCoeff = half3(1.164,  2.018,  0.000);
 
 
 			v2f vert(a2v IN) {
@@ -39,19 +42,25 @@
 				Out.position.z = 1.0;
 				Out.position.w = 1.0;
 				Out.texCoord.xy =sign(IN.vertex.xy)-0.5;// (Out.position.xy);
+				//Out.texCoord.y=1-Out.texCoord.y;
 			   return Out;
 			}
 
 			float4 frag(float2 texcoord : TEXCOORD0) :COLOR  {
 				half3 yuv, rgb;
 				
-				texcoord=texcoord*0.5-0.5;
+				
+				texcoord=texcoord*0.5+0.5;
 			   	texcoord.y=1-texcoord.y;
-				texcoord.y/=1.5;
+				texcoord.y=texcoord.y*2.0f/3.0f;
+				
+				//return float4(texcoord.x,texcoord.y,0,1);
+			   	
 				half2 texSize=half2(1,1/1.5);
-				return float4(1,0,0,1);
+				
 				// lookup Y
-				yuv.r = tex2D(_MainTex, texcoord.xy).r;
+				yuv.r = tex2D(_MainTex, texcoord).a;
+				//return float4(yuv.r,yuv.r,yuv.r,1);
 				
 				// lookup U
 				// co-ordinate conversion algorithm for i420:
@@ -62,19 +71,19 @@
 					texcoord.x += (texSize.x/2.0);
 				}
 				texcoord.y = texSize.y+(texcoord.y/4.0);
-				yuv.g = tex2D(_MainTex, texcoord.xy).r;
+				yuv.g = tex2D(_MainTex, texcoord.xy).a;
 				// lookup V
 				texcoord.y += texSize.y/4.0;
-				yuv.b = tex2D(_MainTex, texcoord.xy).r;
+				yuv.b = tex2D(_MainTex, texcoord.xy).a;
 
 				// Convert
-				yuv += offset;
-				rgb.r = dot(yuv, rCoeff);
-				rgb.g = dot(yuv, gCoeff);
-				rgb.b = dot(yuv, bCoeff);
+				yuv += half3(-0.0625, -0.5, -0.5);
+				rgb.r = dot(yuv, half3(1.164,  0.000,  1.596));//rCoeff);
+				rgb.g = dot(yuv, half3(1.164, -0.391, -0.813));//gCoeff);
+				rgb.b = dot(yuv, half3(1.164,  2.018,  0.000));//bCoeff);
 
 
-				return float4(rgb*5,1);
+				return float4(rgb,1);
 				
 			}
 

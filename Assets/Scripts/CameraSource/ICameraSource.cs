@@ -8,6 +8,8 @@ public enum EyeName
 }
 
 public interface ICameraSource  {
+
+	GstBaseTexture GetBaseTexture();
 	void Init();
 
     Texture GetEyeTexture(EyeName e);

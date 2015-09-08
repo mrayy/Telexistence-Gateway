@@ -11,7 +11,11 @@ public class LocalWebcameraSource : ICameraSource {
 
     WebCamTexture _LeftCam;
     WebCamTexture _RightCam;
-
+	
+	public GstBaseTexture GetBaseTexture()
+	{
+		return null;
+	}
     public void Init()
     {
         LeftInputCamera = Mathf.Min(LeftInputCamera, WebCamTexture.devices.Length - 1);

@@ -28,6 +28,10 @@ public class GstNetworkMultipleTexture : GstBaseTexture {
 	{
 		return StreamsCount;
 	}
+	/*public override int GetCaptureRate (int index)
+	{
+		return _player.GetCaptureRate (index);
+	}*/
 	
 	public override IGstPlayer GetPlayer(){
 		return _player;
@@ -77,15 +81,17 @@ public class GstNetworkMultipleTexture : GstBaseTexture {
 		{
 			Vector2 sz;
 			int components;
-			if (_player.GrabFrame (out sz,out components)) {
-				Resize ((int)sz.x,(int) sz.y,components);
-				for(int i=0;i<m_Texture.Length;++i)
-				{
+			for(int i=0;i<GetTextureCount();++i)
+			{
+				if (_player.GrabFrame (out sz,out components,i)) {
+					Resize ((int)sz.x,(int) sz.y,components,i);
+					OnFrameCaptured(i);
 					if (m_Texture[i] == null)
 						Debug.LogError ("The GstTexture does not have a texture assigned and will not paint.");
 					else
 						_player.BlitTexture (m_Texture[i].GetNativeTexturePtr (), m_Texture[i].width, m_Texture[i].height,i);
 				}
+			
 			}
 			break;	
 		}

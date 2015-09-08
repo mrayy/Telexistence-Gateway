@@ -1,6 +1,6 @@
 ﻿Shader "Image/RedProcessor" {
 	Properties {
-		_MainTex ("Albedo (RGB)", 2D) = "white" {}
+		_MainTex ("", 2D) = "red" {}
 	}
 	SubShader {
 		Pass{
@@ -41,7 +41,8 @@
 			float4 frag(float2 texcoord : TEXCOORD0) :COLOR  {
 				texcoord=texcoord*0.5-0.5;
 			   	texcoord.y=1-texcoord.y;
-				float4 c = tex2D (_MainTex, texcoord) * float4(1,0,0,1);
+				float4 c = tex2D (_MainTex, texcoord).aaaa ;
+				c.a=1;
 				return c;
 			}
 			ENDCG

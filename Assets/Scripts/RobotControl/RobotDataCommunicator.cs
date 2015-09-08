@@ -110,7 +110,13 @@ public class RobotDataCommunicator {
 		if (_client == null)
 			return -1;
 		IPEndPoint ep=null;
-		byte[] data=_client.Receive (ref ep);
+		byte[] data;
+		try
+		{
+			data=_client.Receive (ref ep);
+		}catch{
+			return 0;
+		}
 		if (data == null || data.Length == 0)
 			return 0;
 		var reader = new BinaryReader (new MemoryStream (data));

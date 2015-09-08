@@ -4,7 +4,7 @@ using System.Collections;
 public class TelubeeCameraRenderer : MonoBehaviour {
 	
 	public EyeName Eye;
-	public Texture CamTexture;
+	public ICameraSource CamSource;
 	public Material Mat;
 	public GameObject _RenderPlane;
 	public TelubeeOVRCamera Src;
@@ -15,7 +15,7 @@ public class TelubeeCameraRenderer : MonoBehaviour {
 	OffscreenProcessor _Processor=new OffscreenProcessor();
 	// Use this for initialization
 	void Start () {
-		_Processor.ShaderName = "Image/RedProcessor";
+		_Processor.ShaderName = "Image/I420ToRGB";
 	}
 	
 	// Update is called once per frame
@@ -25,9 +25,11 @@ public class TelubeeCameraRenderer : MonoBehaviour {
 
 	void OnPreRender()
 	{
+		Texture CamTexture = CamSource.GetEyeTexture (Eye);
 		if(CamTexture!=null && Mat!=null)
 		{
-			Mat.mainTexture=_Processor.ProcessTexture(CamTexture);
+			CamTexture=_Processor.ProcessTexture(CamTexture);//CamTexture;//
+			Mat.mainTexture=CamTexture;
 		
 		//	float fovScaler = 1;
 			if(Src.Configuration!=null)

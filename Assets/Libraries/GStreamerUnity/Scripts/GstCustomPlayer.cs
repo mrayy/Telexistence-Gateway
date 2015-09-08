@@ -26,6 +26,8 @@ public class GstCustomPlayer:IGstPlayer  {
 	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
 	extern static private void mray_gst_customPlayerBlitImage(System.IntPtr p, System.IntPtr _TextureNativePtr, int _UnityTextureWidth, int _UnityTextureHeight);
 	
+	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
+	extern static private int mray_gst_customPlayerFrameCount(System.IntPtr p);
 	
 	public Vector2 FrameSize
 	{
@@ -42,6 +44,11 @@ public class GstCustomPlayer:IGstPlayer  {
 		m_Instance = mray_gst_createCustomVideoPlayer();	
 	}
 	
+	public override int GetCaptureRate (int index)
+	{
+		return mray_gst_customPlayerFrameCount (m_Instance);
+	}
+
 	
 	public void SetPipeline(string pipeline)
 	{		

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Runtime.InteropServices;	// For DllImport.
 using System;
 
-public class IGstPlayer {
+public abstract class IGstPlayer {
 	
 	internal const string DllName = "GStreamerUnityPlugin";
 	
@@ -49,7 +49,8 @@ public class IGstPlayer {
 			return m_Instance;
 		}
 	}
-
+	
+	public abstract int GetCaptureRate (int index);
 	public void Destroy()
 	{
 		mray_gst_PlayerDestroy (m_Instance);

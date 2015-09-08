@@ -38,11 +38,11 @@ public class OffscreenProcessor  {
 		if (((Texture2D)InputTexture).format == TextureFormat.Alpha8)
 			height =(int)( height / 1.5f);
 		if (_RenderTexture == null) {
-			_RenderTexture = new RenderTexture (InputTexture.width, InputTexture.height,1, RenderTextureFormat.Default);
-		} else if (	_RenderTexture.width != InputTexture.width || 
-					_RenderTexture.height != InputTexture.height) 
+			_RenderTexture = new RenderTexture (width, height,1, RenderTextureFormat.ARGB32);
+		} else if (	_RenderTexture.width != width || 
+		           _RenderTexture.height != height) 
 		{
-			_RenderTexture = new RenderTexture (InputTexture.width, InputTexture.height,1, RenderTextureFormat.Default);
+			_RenderTexture = new RenderTexture (width, height,1, RenderTextureFormat.ARGB32);
 		}
 	}
 	public Texture ProcessTexture(Texture InputTexture)

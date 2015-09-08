@@ -8,7 +8,10 @@ public class MultipleNetworkCameraSource : ICameraSource {
 	public string Host = "127.0.0.1";
 	public int port=7000;
 	public int StreamsCount=1;
-
+	public GstBaseTexture GetBaseTexture()
+	{
+		return m_Texture;
+	}
 	public void Init()
 	{
 		m_Texture= TargetNode.AddComponent<GstNetworkMultipleTexture> ();
@@ -26,7 +29,10 @@ public class MultipleNetworkCameraSource : ICameraSource {
 	}
 	public Texture GetEyeTexture(EyeName e)
 	{
-		return m_Texture.PlayerTexture[(int)e];
+		if (m_Texture != null && m_Texture.PlayerTexture!=null) {
+			return m_Texture.PlayerTexture [(int)e];
+		}
+		return null;
 	}
 	
 	public Rect GetEyeTextureCoords(EyeName e)

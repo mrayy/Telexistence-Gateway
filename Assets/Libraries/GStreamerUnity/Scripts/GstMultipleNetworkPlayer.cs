@@ -21,13 +21,13 @@ public class GstMultipleNetworkPlayer:IGstPlayer  {
 	extern static private void mray_gst_multiNetPlayerGetFrameSize(System.IntPtr p, ref int w, ref int h, ref int components);
 	
 	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
-	extern static private bool mray_gst_multiNetPlayerGrabFrame(System.IntPtr p, ref int w, ref int h);
+	extern static private bool mray_gst_multiNetPlayerGrabFrame(System.IntPtr p, ref int w, ref int h,int index);
 	
 	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
 	extern static private void mray_gst_multiNetPlayerBlitImage(System.IntPtr p, System.IntPtr _TextureNativePtr, int _UnityTextureWidth, int _UnityTextureHeight, int index);
 	
 	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
-	extern static private int mray_gst_multiNetPlayerFrameCount(System.IntPtr p);
+	extern static private int mray_gst_multiNetPlayerFrameCount(System.IntPtr p,int index);
 	
 	public Vector2 FrameSize
 	{
@@ -44,6 +44,10 @@ public class GstMultipleNetworkPlayer:IGstPlayer  {
 		m_Instance = mray_gst_createNetworkMultiplePlayer();	
 	}
 	
+	public override int GetCaptureRate (int index)
+	{
+		return mray_gst_multiNetPlayerFrameCount (m_Instance,index);
+	}
 	
 	public void SetIP(string ip,int baseVideoPort,int count,bool rtcp)
 	{		
@@ -54,10 +58,10 @@ public class GstMultipleNetworkPlayer:IGstPlayer  {
 		return mray_gst_multiNetPlayerCreateStream (m_Instance);
 	}
 	
-	public bool GrabFrame(out Vector2 frameSize,out int comp)
+	public bool GrabFrame(out Vector2 frameSize,out int comp,int index)
 	{
 		int w=0,h=0,c=0;
-		if(mray_gst_multiNetPlayerGrabFrame(m_Instance,ref w,ref h))
+		if(mray_gst_multiNetPlayerGrabFrame(m_Instance,ref w,ref h,index))
 		{
 			mray_gst_multiNetPlayerGetFrameSize(m_Instance,ref w,ref h,ref c);
 			comp=c;

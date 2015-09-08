@@ -28,6 +28,10 @@ public class GstNetworkTexture : GstBaseTexture {
 	{
 		return 1;
 	}
+	/*public override int GetCaptureRate (int index)
+	{
+		return _player.GetCaptureRate (index);
+	}*/
 	
 	public override IGstPlayer GetPlayer(){
 		return _player;
@@ -74,10 +78,11 @@ public class GstNetworkTexture : GstBaseTexture {
 		switch (e.type) {
 		case EventType.Repaint:	
 			{
-			Vector2 sz;
-			int components;
-			if (_player.GrabFrame (out sz,out components)) {
-				Resize ((int)sz.x,(int) sz.y,components);
+				Vector2 sz;
+				int components;
+				if (_player.GrabFrame (out sz,out components)) {
+					Resize ((int)sz.x,(int) sz.y,components,0);
+					OnFrameCaptured(0);
 					if (m_Texture[0] == null)
 						Debug.LogError ("The GstTexture does not have a texture assigned and will not paint.");
 					else

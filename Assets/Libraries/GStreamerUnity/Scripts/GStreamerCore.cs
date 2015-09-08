@@ -20,16 +20,27 @@ public class GStreamerCore {
 	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
 	extern static private void mray_SetDebugFunction( IntPtr str );
 
+	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
+	extern static private void mray_SetGetEngineTime( IntPtr str );
+
 
 	[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 	public delegate void MyDelegate(string str);
-
+	
+	[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+	public delegate float MyDelegate2();
 
 	static void CallBackFunction(string str)
 	{
 		Debug.Log("mrayGStreamer: " + str);
 	}
 
+	static public float Time=0;
+
+	static float GetEngineTime()
+	{
+		return Time;
+	}
 
 	static IntPtr _nativeLibraryPtr;
 
@@ -55,6 +66,10 @@ public class GStreamerCore {
 			MyDelegate callback=new MyDelegate(CallBackFunction);
 			IntPtr intptr_del=Marshal.GetFunctionPointerForDelegate(callback);
 			mray_SetDebugFunction(intptr_del);
+
+			MyDelegate2 callback2=new MyDelegate2(GetEngineTime);
+			intptr_del=Marshal.GetFunctionPointerForDelegate(callback2);
+			mray_SetGetEngineTime(intptr_del);
 		}
 		mray_gstreamer_initialize();
 	}

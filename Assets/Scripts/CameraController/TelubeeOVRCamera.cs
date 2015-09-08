@@ -6,7 +6,7 @@ public class TelubeeOVRCamera : MonoBehaviour {
 
 	OVRCameraRig OculusCamera;
 	public Material TargetMaterial;
-
+	public int TargetFrameRate=80;
     public enum CameraSourceType
     {
         Local,
@@ -17,12 +17,14 @@ public class TelubeeOVRCamera : MonoBehaviour {
 
 	public TELUBeeConfiguration Configuration;
 
+	public DebugInterface Debugger;
+
 	GameObject[] _RenderPlane=new GameObject[2];
     ICameraSource _cameraSource;
 
-	TelubeeCameraRenderer _LeftRenderer;
-	TelubeeCameraRenderer _RightRenderer;
+	TelubeeCameraRenderer[] _camRenderer=new TelubeeCameraRenderer[2];
 
+	DebugCameraCaptureElement _cameraDebugElem;
 
 	string _remoteHostIP;
 
@@ -36,7 +38,7 @@ public class TelubeeOVRCamera : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-
+		Application.targetFrameRate = TargetFrameRate;
 
         OculusCamera = gameObject.GetComponent<OVRCameraRig>();
 
@@ -45,6 +47,7 @@ public class TelubeeOVRCamera : MonoBehaviour {
 
 
 	}
+
 
     void Init()
     {
@@ -64,6 +67,7 @@ public class TelubeeOVRCamera : MonoBehaviour {
 			c.Init();
 		}
 
+
 		EyeName[] eyes = new EyeName[]{EyeName.LeftEye,EyeName.RightEye};
         if (OculusCamera != null)
         {
@@ -80,16 +84,15 @@ public class TelubeeOVRCamera : MonoBehaviour {
 				r.Eye = eyes[i];
 				r.Src = this;
 
+				_camRenderer[i]=r;
+
+				r.CamSource = _cameraSource;
                 if (i == 0)
                 {
-                    r.CamTexture = _cameraSource.GetEyeTexture(EyeName.RightEye);
-                    _RightRenderer = r;
 					_RenderPlane[i].layer=LayerMask.NameToLayer("RightEye");
                 }
                 else
                 {
-                    r.CamTexture = _cameraSource.GetEyeTexture(EyeName.LeftEye);
-                    _LeftRenderer = r;
 					_RenderPlane[i].layer=LayerMask.NameToLayer("LeftEye");
 				}
 				_RenderPlane[i].transform.parent = cams[i].transform;
@@ -135,6 +138,8 @@ public class TelubeeOVRCamera : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		GStreamerCore.Time = Time.time;
+
 		//if(_configurationDirty)
 		{
 			//_configurationDirty=false;
@@ -158,17 +163,30 @@ public class TelubeeOVRCamera : MonoBehaviour {
 			_cameraSource=null;
 		}
 		_remoteHostIP = IP;
-		
-		NetworkCameraSource c;
-		_cameraSource = (c=new NetworkCameraSource());
+		/*
+		MultipleNetworkCameraSource c;
+		_cameraSource = (c=new MultipleNetworkCameraSource());
 		c.TargetNode=gameObject;
 		c.Host = IP;
 		c.port = port;
-		c.Init();
-		
-		if (_LeftRenderer != null) 
-			_LeftRenderer.CamTexture=c.GetEyeTexture(EyeName.LeftEye);
-		if (_RightRenderer != null) 
-			_RightRenderer.CamTexture=c.GetEyeTexture(EyeName.RightEye);
+		c.Init();*/
+		{
+			
+			MultipleNetworkCameraSource c;
+			_cameraSource = (c = new MultipleNetworkCameraSource ());
+			c.StreamsCount = 2;
+			c.TargetNode = gameObject;
+			c.Host = IP;
+			c.port = port;
+			c.Init ();
+			for(int i=0;i<2;++i)
+				_camRenderer[i].CamSource=_cameraSource;
+			if (Debugger) {
+				Debugger.RemoveDebugElement(_cameraDebugElem);;
+				_cameraDebugElem=new DebugCameraCaptureElement(_cameraSource.GetBaseTexture());
+				Debugger.AddDebugElement(_cameraDebugElem);;
+			}
+		}
+
 	}
 }
