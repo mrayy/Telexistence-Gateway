@@ -9,6 +9,7 @@
 		Lighting Off
 		ZWrite Off
 		Cull Off
+			Fog { Mode off }
 		
 		CGPROGRAM
 		#pragma surface surf Lambert
@@ -24,6 +25,9 @@
 		float2 LensCenter=float2(0.5,0.5);
 		float2 FocalLength=float2(1,1);
 		float4 WrapParams=float4(1,1,1,1);
+		
+		float2 PixelShift=float2(0,0);
+		float2 TextureSize=float2(1,1);
 		
 		float2 _CorrectDistortion(float2 uv)
 		{ 
@@ -42,7 +46,7 @@
 		    
 		}
 		void surf (Input IN, inout SurfaceOutput o) {
-		
+			IN.uv_MainTex+=PixelShift/TextureSize;
 			float2 tc=_CorrectDistortion(IN.uv_MainTex);
 			float4 c;
 			if (any(clamp(tc, float2(0.0,0.0), float2(1.0, 1.0)) - tc))    

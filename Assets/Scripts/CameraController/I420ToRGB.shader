@@ -41,7 +41,7 @@
 				Out.position.xy=2*sign(IN.vertex.xy)-1;
 				Out.position.z = 1.0;
 				Out.position.w = 1.0;
-				Out.texCoord.xy =sign(IN.vertex.xy)-0.5;// (Out.position.xy);
+				Out.texCoord.xy =sign(IN.vertex.xy)*0.5+0.5;// (Out.position.xy);
 				//Out.texCoord.y=1-Out.texCoord.y;
 			   return Out;
 			}

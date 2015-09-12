@@ -23,7 +23,7 @@ public class RemoteRobotCommunicator : IRobotCommunicator,IDisposable {
 		{
 			while (!this.IsDone) 
 			{
-				if(owner._connected)
+				if(owner._connected || owner.Broadcast)
 				{
 					owner.Update(0);
 				}
@@ -66,6 +66,17 @@ public class RemoteRobotCommunicator : IRobotCommunicator,IDisposable {
 	Dictionary<string,DataInfo> _values = new Dictionary<string, DataInfo> ();
 	string _outputValues="";
 
+	bool _broadCast=false;
+
+	public bool Broadcast
+	{
+		set{
+			_broadCast = value;
+		}
+		get{
+			return _broadCast;
+		}
+	}
 
 	void _SendUpdate()
 	{
@@ -136,7 +147,31 @@ public class RemoteRobotCommunicator : IRobotCommunicator,IDisposable {
 			_thread.Abort();
 		}
 	}
-
+	public override void SetBroadcastNext(bool set){
+		Broadcast = set;
+	}
+	public override void BroadcastMessage(int port)
+	{
+		byte[] d;
+		_UpdateData ();
+		lock(_values)
+		{
+			d=Encoding.UTF8.GetBytes(_outputValues);
+			ClearData (false);
+		}
+		if (d.Length == 0)
+			return;
+		bool removeClient = false;
+		if (_client == null) {
+			_client = new UdpClient ();
+			removeClient=true;
+		}
+		_client.Send(d,d.Length,new IPEndPoint(IPAddress.Broadcast,port));
+		if (removeClient) {
+			_client.Close ();
+			_client = null;
+		}
+	}
 	public override bool Connect (string ip, int port)
 	{
 		if (_connected)
@@ -176,12 +211,12 @@ public class RemoteRobotCommunicator : IRobotCommunicator,IDisposable {
 	public override void ConnectUser(bool c)
 	{
 		_userInfo.UserConnected = c;
-		SetData("RobotConnect", c.ToString(),true);
 		_SendUpdate ();
 	}
 	public override void ConnectRobot(bool c)
 	{
 		_userInfo.RobotConnected = c;
+		SetData("RobotConnect", c.ToString(),true);
 		_SendUpdate ();
 	}
 
@@ -222,7 +257,7 @@ public class RemoteRobotCommunicator : IRobotCommunicator,IDisposable {
 	
 	public override void Update(float dt)
 	{
-		if (!_connected)
+		if (!_connected && !Broadcast)
 			return;
 
 		byte[] d;
@@ -235,7 +270,14 @@ public class RemoteRobotCommunicator : IRobotCommunicator,IDisposable {
 			return;
 		try
 		{
-			_client.Send (d, d.Length);//, _addr
+			if(Broadcast)
+			{
+				Broadcast=false;//only broadcast once
+				_client.Send(d,d.Length,new IPEndPoint(IPAddress.Broadcast,_addr.Port));
+			}else
+			{
+				_client.Send (d, d.Length);//, _addr
+			}
 		}catch(Exception e)
 		{
 			LogSystem.Instance.Log("RemoteRobotCommunicator::Update() - "+e.Message,LogSystem.LogType.Warning);

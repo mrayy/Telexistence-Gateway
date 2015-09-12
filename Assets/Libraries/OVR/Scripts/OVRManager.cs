@@ -668,6 +668,7 @@ public class OVRManager : MonoBehaviour
 				, "VR Configuration Warning", 0);
 		}
 #endif
+
 	}
 
 	private void OnDestroy()
@@ -837,8 +838,8 @@ public class OVRManager : MonoBehaviour
 			HdrModified(prevHdr, hdr);
 
 		prevHdr = hdr;
-
-		if (isHSWDisplayed && Input.anyKeyDown)
+		
+		if (isHSWDisplayed )
 		{
 			DismissHSWDisplay();
 			

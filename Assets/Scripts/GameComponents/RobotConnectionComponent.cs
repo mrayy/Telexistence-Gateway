@@ -10,6 +10,7 @@ public class RobotConnectionComponent : MonoBehaviour {
 	public AppManager.BaseControllerType BaseControllerType;
 
 	public TelubeeOVRCamera VideoStream;
+	public DebugInterface Debugger;
 
 	public bool NullValues=false;
 	bool _connected=false;
@@ -22,6 +23,13 @@ public class RobotConnectionComponent : MonoBehaviour {
 		get
 		{
 			return _connected;
+		}
+	}
+	
+	public RobotConnector Connector
+	{
+		get{
+			return _connector;
 		}
 	}
 	// Use this for initialization
@@ -41,16 +49,29 @@ public class RobotConnectionComponent : MonoBehaviour {
 		}
 		_connector.RobotCommunicator = new RemoteRobotCommunicator ();
 		_connector.DataCommunicator.OnMessage += OnMessage;
+		_connector.DataCommunicator.OnRobotInfoDetected += OnRobotInfoDetected;
+		_connector.StartDataCommunicator (Settings.Instance.TargetPorts.CommPort);
+		_connector.RobotCommunicator.SetData ("detect", Settings.Instance.TargetPorts.CommPort.ToString(), false);
+		_connector.RobotCommunicator.BroadcastMessage (Settings.Instance.TargetPorts.CommPort);
+
+		if (Debugger != null) {
+			Debugger.AddDebugElement(new DebugHeadPose(_connector));
+		}
 
 	}
 	void OnMessage(int message,BinaryReader reader)
 	{
-		Debug.Log ("Message Arrived: " + message.ToString());
+	//	Debug.Log ("Message Arrived: " + message.ToString());
 		if (message == (int)RobotDataCommunicator.Messages.RobotStatus) {
 			int status= reader.ReadInt32();
 			
-			Debug.Log ("Robot Status: " + ((RobotDataCommunicator.ERobotControllerStatus)status).ToString());
+		//	Debug.Log ("Robot Status: " + ((RobotDataCommunicator.ERobotControllerStatus)status).ToString());
 		}
+	}
+	void OnRobotInfoDetected(RobotInfo ifo)
+	{
+		Debug.Log ("Robot detected: " + ifo.Name);
+		_RobotIP = ifo;
 	}
 	void OnDestroy()
 	{
@@ -66,7 +87,12 @@ public class RobotConnectionComponent : MonoBehaviour {
 			if(IsConnected)
 				DisconnectRobot();
 			else
-				ConnectRobot(AppManager.Instance.RobotManager.GetRobotInfo(RobotIndex));
+			{
+				RobotInfo ifo=_RobotIP;
+				if(ifo==null)
+					ifo=AppManager.Instance.RobotManager.GetRobotInfo(RobotIndex);
+				ConnectRobot(ifo);
+			}
 		}
 		if (IsConnected && Input.GetKeyDown (KeyCode.Space)) {
 			_connector.Recalibrate();

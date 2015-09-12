@@ -39,13 +39,17 @@ public abstract class GstBaseTexture : MonoBehaviour {
 
 	public bool IsLoaded {
 		get {
-			return GetPlayer().IsLoaded;
+			if(GetPlayer()!=null)
+				return GetPlayer().IsLoaded;
+			return false;
 		}
 	}
 	
 	public bool IsPlaying {
 		get {
-			return GetPlayer().IsPlaying;
+			if(GetPlayer()!=null)
+				return GetPlayer().IsPlaying;
+			return false;
 		}
 	}
 
@@ -102,22 +106,26 @@ public abstract class GstBaseTexture : MonoBehaviour {
 	
 	public void Play()
 	{
-		GetPlayer().Play ();
+		if(GetPlayer()!=null)
+			GetPlayer().Play ();
 	}
 	
 	public void Pause()
 	{
-		GetPlayer().Pause ();
+		if(GetPlayer()!=null)
+			GetPlayer().Pause ();
 	}
 	
 	public void Stop()
 	{
-		GetPlayer().Stop ();
+		if(GetPlayer()!=null)
+			GetPlayer().Stop ();
 	}
 	
 	public void Close()
 	{
-		GetPlayer().Close ();
+		if(GetPlayer()!=null)
+			GetPlayer().Close ();
 	}
 	void OnDestroy()
 	{
@@ -151,7 +159,8 @@ public abstract class GstBaseTexture : MonoBehaviour {
 				m_Texture[i].wrapMode=TextureWrapMode.Clamp;
 			}
 		}
-		if (m_Texture [index].width != _Width || m_Texture [index].height != _Width) {
+		if (m_Texture [index].width != _Width || m_Texture [index].height != _Height) {
+			Debug.Log("Creating Texture video stream: "+_Width.ToString()+"x"+_Height.ToString());
 			m_Texture [index].Resize (_Width, _Height, GetFormat (components), false);
 			m_Texture [index].Apply (false, false);
 		}

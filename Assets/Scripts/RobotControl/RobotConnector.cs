@@ -93,9 +93,18 @@ public class RobotConnector:IDisposable{
 		DataCommunicator = new RobotDataCommunicator ();
 	}
 
+	public void StartDataCommunicator(int port)
+	{
+		DataCommunicator.Start(port);
+	}
+	public void StopDataCommunicator()
+	{
+		DataCommunicator.Stop ();
+	}
 	public void Dispose()
 	{
 		DisconnectRobot ();
+		StopDataCommunicator ();
 		RobotCommunicator = null;
 		DataCommunicator = null;
 	}
@@ -107,7 +116,6 @@ public class RobotConnector:IDisposable{
 		if (_robotIfo.Connected)
 			RobotCommunicator.Disconnect();
 
-		DataCommunicator.Start(_ports.CommPort);
 
 		_robotIfo.Connected = RobotCommunicator.Connect(_ports.RobotIP, _ports.CommPort);
 		RobotCommunicator.ClearData(true);
@@ -145,7 +153,6 @@ public class RobotConnector:IDisposable{
 		RobotCommunicator.Update(0);//only once
 		EndUpdate();
 		RobotCommunicator.Disconnect();
-		DataCommunicator.Stop ();
 		_robotIfo.Connected = false;
 	}
 	public void StartUpdate()

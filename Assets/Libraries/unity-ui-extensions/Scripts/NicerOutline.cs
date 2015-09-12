@@ -168,10 +168,10 @@ namespace UnityEngine.UI.Extensions
 			this.ApplyShadow (verts, this.effectColor, start, verts.Count, 0, -distanceY);
 		}
 		
-		protected override void OnValidate ()
+		protected /*override*/ void OnValidate ()
 		{
 			this.effectDistance = this.m_EffectDistance;
-			base.OnValidate ();
+//			base.OnValidate ();
 		}
 	}
 }

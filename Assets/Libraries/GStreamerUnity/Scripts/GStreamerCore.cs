@@ -6,7 +6,8 @@ using System;
 public class GStreamerCore {
 	
 	internal const string DllName = "GStreamerUnityPlugin";
-	
+
+
 	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
 	extern static private bool mray_gstreamer_initialize(  );
 

@@ -23,7 +23,9 @@ public class RobotDataCommunicator {
 		ClockSync = 10,
 		ReinitializeRobot = 11,
 		RobotStatus=12,
-		JointValues=13
+		JointValues=13,
+		Detect = 14,
+		Presence = 15
 	}
 	public enum ERobotControllerStatus
 	{
@@ -67,6 +69,7 @@ public class RobotDataCommunicator {
 	public delegate void Delg_OnIRSensor(float[] v);
 	public delegate void Delg_OnBatteryLevel(int level);
 	public delegate void Delg_OnMessage(int message,BinaryReader reader);
+	public delegate void Delg_OnRobotInfoDetected(RobotInfo ifo);
 
 
 	public event Delg_OnCameraConfig OnCameraConfig;
@@ -76,6 +79,7 @@ public class RobotDataCommunicator {
 	public event Delg_OnIRSensor OnIRSensor;
 	public event Delg_OnMessage OnMessage;
 	public event Delg_OnBatteryLevel OnBatteryLevel;
+	public event Delg_OnRobotInfoDetected OnRobotInfoDetected;
 
 	public RobotDataCommunicator()
 	{
@@ -122,6 +126,13 @@ public class RobotDataCommunicator {
 		var reader = new BinaryReader (new MemoryStream (data));
 		int msg = reader.ReadInt32 ();
 		switch (msg) {
+		case (int)Messages.Presence:
+		{
+			RobotInfo ifo=new RobotInfo();
+			ifo.Read(reader);
+			if(OnRobotInfoDetected!=null)
+				OnRobotInfoDetected(ifo);
+		}break;
 		case (int)Messages.DepthData:
 			break;
 		case (int)Messages.DepthSize:
@@ -130,13 +141,13 @@ public class RobotDataCommunicator {
 			break;
 		case (int)Messages.CameraConfig:
 			if(OnCameraConfig!=null)
-				OnCameraConfig(reader.ReadString());
+				OnCameraConfig(reader.ReadStringNative());
 			break;
 		case (int)Messages.ReportMessage:
 			if(OnReportMessage!=null)
 			{
 				int code=reader.ReadInt32();
-				string str=reader.ReadString();
+				string str=reader.ReadStringNative();
 				OnReportMessage(code,str);
 			}
 			break;

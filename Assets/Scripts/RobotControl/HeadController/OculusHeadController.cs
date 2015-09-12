@@ -12,7 +12,7 @@ public class OculusHeadController : IRobotHeadControl {
 			return false;
 		}
 
-		q = OVRManager.display.GetEyePose (OVREye.Left).orientation;
+		q = OVRManager.display.GetHeadPose (0).orientation;
 		if (!abs) {
 		//	q=q*_initial;
 		}
@@ -27,7 +27,7 @@ public class OculusHeadController : IRobotHeadControl {
 			v=Vector3.zero;
 			return false;
 		}
-		v = OVRManager.display.GetEyePose (OVREye.Left).position;
+		v = OVRManager.display.GetHeadPose (0).position;
 		return true;
 	}
 	

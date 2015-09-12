@@ -282,3 +282,340 @@ Info:Start Updating Robot:Torso2
 Info:End Updating Robot:Torso2
 Info:Start Updating Robot:Torso2
 Info:End Updating Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:End Updating Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:End Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:End Updating Robot:Torso2
+Info:Start Updating Robot:Torso2
+Warning:RemoteRobotCommunicator::Update() - The object was used after being disposed.
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:End Updating Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:End Updating Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:End Updating Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:End Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:End Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:End Updating Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:End Updating Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:End Updating Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:End Updating Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:End Updating Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:End Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:End Updating Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:End Updating Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:End Updating Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot

@@ -13,6 +13,9 @@ public class TELUBeeConfiguration : MonoBehaviour {
 		public Vector2 LensCenter;
 		public Vector2 FocalLength;
 		public float K1,K2,P1,P2;
+		public Vector2 PixelShiftLeft= Vector2.zero;
+		public Vector2 PixelShiftRight= Vector2.zero;
+		public float Focal=1;
 		public bool Flipped=false;
 	}
 
