@@ -2,81 +2,79 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class VirtualRuler : ICameraPostRenderer {
-	
-	public class VirtualRulerImpl : VRGUI {
-		
-		public VirtualRuler Owner;
-		public override void OnVRGUI()
-		{
-			Owner.OnOVRGUI ();
-		}
-	}
+public class VirtualRuler : MonoBehaviour {
+
 	public Camera TargetCamera;
 	public float Distance;
 	public float Radius;
-	VirtualRulerImpl _impl;
+	public Material RenderMaterial;
+	bool showText = true;
 
-	public Material mat;
-	Vector3[] vertices;
-	int[] indicies ;
+	float _lastRadius;
 
-	Vector2 _distancePos,_sizePos;
+	public UILabel DistanceLabel;
+	public UILabel SizeLabel;
+
+	bool _Visible=false;
+
+	public Vector2 _distancePos,_sizePos;
 
 	Text _displayText;
-	UIRenderer _renderer = new UIRenderer ();
 	// Use this for initialization
 	void Start () {
+		MeshRenderer r= gameObject.AddComponent<MeshRenderer> ();
+		MeshFilter mf= gameObject.AddComponent<MeshFilter> ();
 
-		vertices = new Vector3[]{
-			new Vector3(-0.5f,-0.5f,0),
-			new Vector3( 0.5f,-0.5f,0),
-			new Vector3( 0.5f, 0.5f,0),
-			new Vector3(-0.5f, 0.5f,0)
-		};
-		indicies = new int[]{
-			0,1,2,3,0};
+		r.material = RenderMaterial;
+		mf.mesh = MeshGenerator.GenerateTorus (0.05f,40, 0.05f, _lastRadius);
+		transform.localRotation = Quaternion.Euler(90,0,0);
 
-		_impl = gameObject.AddComponent<VirtualRulerImpl> ();
-		_impl.Owner = this;
+		SetVisible (false);
+	}
+
+	void SetVisible(bool v)
+	{
+		_Visible = v;
+		gameObject.GetComponent<MeshRenderer> ().enabled = v;
+		
+		if (DistanceLabel)
+			DistanceLabel.enabled = v;
+		if (SizeLabel)
+			SizeLabel.enabled = v;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		transform.localRotation = Quaternion.identity;
-		//transform.localPosition = new Vector3 (0, 0, Distance);
-	}
+		Vector2 pos;
 
-	void _CreateMaterial()
-	{
+		if (_Visible) {
+			transform.localPosition = new Vector3 (0, 0, Distance);
+
+			pos = ProjectPoint (Vector3.forward * 10);
+			DistanceLabel.text = "Distance:" + ToMetric (Distance);
+			DistanceLabel.transform.localPosition = new Vector3 (pos.x, pos.y, 0);
 		
-		if (!mat) { 
-			/* Credit:  */
-			mat = new Material("Shader \"Lines/Colored Blended\" {" +
-			                   "SubShader { Pass {" +
-			                   "   BindChannels { Bind \"Color\",color }" +
-			                   "   Blend SrcAlpha OneMinusSrcAlpha" +
-			                   "   ZTest Off ZWrite Off Cull Off Fog { Mode Off }" +
-			                   "} } }");
-			mat.hideFlags = HideFlags.HideAndDontSave;
-			mat.shader.hideFlags = HideFlags.HideAndDontSave;
-			
+			pos = ProjectPoint (new Vector3 (Radius, 0, Distance));
+			SizeLabel.text = "Size:" + ToMetric (Radius);
+			SizeLabel.transform.localPosition = new Vector3 (pos.x, pos.y, 0);
+
+			if (Radius != _lastRadius) {
+				MeshFilter mf = gameObject.GetComponent<MeshFilter> ();
+				_lastRadius = Radius;
+				MeshGenerator.ScaleTorus (mf.mesh, 0.1f, _lastRadius * 0.1f, _lastRadius, 40);
+			}
+
+			Distance += ((Input.GetKey (KeyCode.UpArrow) ? 1 : 0) - (Input.GetKey (KeyCode.DownArrow) ? 1 : 0)) * Time.deltaTime;
+			Radius += ((Input.GetKey (KeyCode.RightArrow) ? 1 : 0) - (Input.GetKey (KeyCode.LeftArrow) ? 1 : 0)) * Time.deltaTime;
+
+			Distance = Mathf.Max (0.0f, Distance);
+			Radius = Mathf.Max (0.0f, Radius);
 		}
+		if (Input.GetKeyDown (KeyCode.V)) {
+			SetVisible(!_Visible);
+		}
+	}
 
-	}
-	public override void OnPostRender()
-	{
-		_CreateMaterial ();
-		GL.PushMatrix ();
-		GL.LoadOrtho ();
-		mat.SetPass (0);
-		GL.Color (Color.white);
-		if(_renderer.ResultTexture!=null)
-			Graphics.DrawTexture (Camera.current.pixelRect, _impl.guiRenderTexture);
-		GL.PopMatrix ();
-		
-	}
-	bool showText = true;
 
 	string ToMetric(float v)
 	{
@@ -92,7 +90,7 @@ public class VirtualRuler : ICameraPostRenderer {
 		value = (int)(value * 100) * 0.01f;
 		return value.ToString () + unit;
 	}
-	
+	/*
 	void DrawCross(Vector2 pos,float size)
 	{
 		_CreateMaterial ();
@@ -114,15 +112,25 @@ public class VirtualRuler : ICameraPostRenderer {
 		GL.Vertex3 (pos.x - sx / 2, pos.y + sy / 2, 0);
 		GL.End ();
 		GL.PopMatrix();
-	}
+	}*/
 	
 	Rect _textArea = new Rect(0,0,Screen.width, Screen.height);
+
+	Vector2 ProjectPoint(Vector3 pos)
+	{
+		Vector2 ret = TargetCamera.WorldToScreenPoint (TargetCamera.transform.position + TargetCamera.transform.rotation * pos);
+		ret.x -= TargetCamera.pixelWidth / 2;
+		ret.y -= TargetCamera.pixelHeight / 2;
+		return ret;
+
+	}
 	Vector2 DrawString(string str,Vector3 pos,Color color,Vector2 Offset)
 	{
-		Camera c=Camera.current;
+		Camera c=TargetCamera;
 		if (c == null)
 			return Vector2.zero;
-		Vector2 ret= c.WorldToScreenPoint(c.transform.position+c.transform.rotation*pos);
+
+		Vector2 ret= ProjectPoint(pos);
 		//DrawCross (_distancePos, 15);
 		_textArea.position=ret+Offset;
 		GUI.skin.GetStyle("Label").fontStyle=FontStyle.Bold;
@@ -145,7 +153,7 @@ public class VirtualRuler : ICameraPostRenderer {
 		string str="Size:"+ToMetric(Radius);
 		_sizePos= DrawString(str,new Vector3(Radius,0,Distance),Color.green,new Vector2(0,15));
 	}
-	public override void OnOVRGUI()
+	 void OnOVRGUI()
 	{
 	//	if (Camera.current != TargetCamera)
 	//		return;
@@ -156,8 +164,10 @@ public class VirtualRuler : ICameraPostRenderer {
 			DrawSize();
 		}
 		
-		DrawCross (_distancePos, 15);
-		DrawCross (_sizePos, 15);
+	//	DrawCross (_distancePos, 15);
+	//	DrawCross (_sizePos, 15);
+
+
 	//	_renderer.End ();
 	}
 }

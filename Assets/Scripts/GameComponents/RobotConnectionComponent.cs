@@ -17,12 +17,27 @@ public class RobotConnectionComponent : MonoBehaviour {
 	public int RobotIndex;
 
 	RobotInfo _RobotIP;
+
+	RobotDataCommunicator.ERobotControllerStatus _robotStatus=RobotDataCommunicator.ERobotControllerStatus.EStopped;
+	public RobotDataCommunicator.ERobotControllerStatus RobotStatus
+	{
+		get{
+			return _robotStatus;
+		}
+	}
 	
 	public bool IsConnected
 	{
 		get
 		{
 			return _connected;
+		}
+	}
+	public bool IsRobotConnected
+	{
+		get
+		{
+			return Connector.IsRobotConnected;
 		}
 	}
 	
@@ -50,13 +65,18 @@ public class RobotConnectionComponent : MonoBehaviour {
 		_connector.RobotCommunicator = new RemoteRobotCommunicator ();
 		_connector.DataCommunicator.OnMessage += OnMessage;
 		_connector.DataCommunicator.OnRobotInfoDetected += OnRobotInfoDetected;
+		_connector.DataCommunicator.OnRobotStatus += OnRobotStatus;
+
 		_connector.StartDataCommunicator (Settings.Instance.TargetPorts.CommPort);
+
+		//Send Detect Message to scan network for the available robots
 		_connector.RobotCommunicator.SetData ("detect", Settings.Instance.TargetPorts.CommPort.ToString(), false);
 		_connector.RobotCommunicator.BroadcastMessage (Settings.Instance.TargetPorts.CommPort);
 
 		if (Debugger != null) {
-			Debugger.AddDebugElement(new DebugHeadPose(_connector));
+			Debugger.AddDebugElement(new DebugRobotStatus(this));
 		}
+
 
 	}
 	void OnMessage(int message,BinaryReader reader)
@@ -68,6 +88,11 @@ public class RobotConnectionComponent : MonoBehaviour {
 		//	Debug.Log ("Robot Status: " + ((RobotDataCommunicator.ERobotControllerStatus)status).ToString());
 		}
 	}
+
+	void OnRobotStatus(RobotDataCommunicator.ERobotControllerStatus status)
+	{
+		_robotStatus = status;
+	}
 	void OnRobotInfoDetected(RobotInfo ifo)
 	{
 		Debug.Log ("Robot detected: " + ifo.Name);
@@ -77,6 +102,14 @@ public class RobotConnectionComponent : MonoBehaviour {
 	{
 		_connector.Dispose();
 		_connector = null;
+	}
+
+	void Connect()
+	{
+		RobotInfo ifo=_RobotIP;
+		if(ifo==null)
+			ifo=AppManager.Instance.RobotManager.GetRobotInfo(RobotIndex);
+		ConnectRobot(ifo);
 	}
 	// Update is called once per frame
 	void Update () {
@@ -88,10 +121,7 @@ public class RobotConnectionComponent : MonoBehaviour {
 				DisconnectRobot();
 			else
 			{
-				RobotInfo ifo=_RobotIP;
-				if(ifo==null)
-					ifo=AppManager.Instance.RobotManager.GetRobotInfo(RobotIndex);
-				ConnectRobot(ifo);
+				Connect();
 			}
 		}
 		if (IsConnected && Input.GetKeyDown (KeyCode.Space)) {

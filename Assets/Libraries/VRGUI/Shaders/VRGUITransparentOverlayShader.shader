@@ -40,13 +40,16 @@ SubShader
 				{
 					v2f o;
 					o.vertex =  v.vertex;
-					o.texcoord = v.texcoord;
+					o.texcoord = v.vertex.xy*0.5+0.5;
+					o.texcoord.y=1-o.texcoord.y;
 					return o;
 				}
 				
 				fixed4 frag (v2f i) : COLOR
 				{
 					fixed4 col = tex2D(_MainTex, i.texcoord);
+					col.rg=i.texcoord;
+					col.a=1;
 					return  col;
 				}
 			ENDCG

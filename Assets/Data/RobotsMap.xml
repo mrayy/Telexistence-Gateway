@@ -1,5 +1,5 @@
 <Robots>
-  <Robot Name="Torso2" IP="192.168.11.26"/>
+  <Robot Name="Torso2" IP="192.168.10.40"/>
   <Robot Name="Local" IP="127.0.0.1"/>
   <Robot Name="Telubee" IP="192.168.11.3"/>
   <Robot Name="Torso" IP="192.168.10.63"/>

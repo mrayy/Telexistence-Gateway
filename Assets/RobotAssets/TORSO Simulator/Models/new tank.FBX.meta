@@ -1,0 +1,499 @@
+fileFormatVersion: 2
+guid: 82b22d429f196bb4789cb8bcf0a35bd7
+timeCreated: 1435571823
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: base bottom:1
+    100002: base cover:1
+    100004: base:1
+    100006: battery:1
+    100008: binocular camera:1
+    100010: binocular camera:1 1
+    100012: binocular camera:1 2
+    100014: binocular camera_MIR:1
+    100016: binocular camera_MIR:1 1
+    100018: binocular camera_MIR:1 2
+    100020: board:1
+    100022: box on rod:1
+    100024: camera seat:1
+    100026: chain:1
+    100028: chain:1 1
+    100030: chain:2
+    100032: chain:2 1
+    100034: counterweight:1
+    100036: crawler battery:1
+    100038: front pivot stick:1
+    100040: front right box:1
+    100042: front stablizer:1
+    100044: granade:1
+    100046: granade:2
+    100048: inner tube:1
+    100050: left box:1
+    100052: main rail:1
+    100054: main rail:1 1
+    100056: main track:1
+    100058: main track:1 1
+    100060: main wheel hub:1
+    100062: main wheel hub:1 1
+    100064: //RootNode
+    100066: ohlin:1
+    100068: ohlin_MIR1:1
+    100070: outer tube:1
+    100072: piston inner cylinder:1
+    100074: piston outer cylinder:1
+    100076: rain coat:1
+    100078: rear stablizer:1
+    100080: right top box:1
+    100082: rod:1
+    100084: roll cage:1
+    100086: roll joint:1
+    100088: sealing:1
+    100090: second pitch joint:1
+    100092: shaft:1
+    100094: sheath:1
+    100096: slider chassis:1
+    100098: slider:1
+    100100: stick rail new:1
+    100102: stick rail new:1 1
+    100104: sub rail:1
+    100106: sub rail:1 1
+    100108: sub rail:1 2
+    100110: sub rail:1 3
+    100112: sub track:1
+    100114: sub track:1 1
+    100116: sub track:2
+    100118: sub track:2 1
+    100120: sub wheel hub:1
+    100122: sub wheel hub:1 1
+    100124: sub wheel hub:1 2
+    100126: sub wheel hub:1 3
+    100128: wheel:1
+    100130: wheel:1 1
+    100132: wheel:1 2
+    100134: wheel:1 3
+    100136: wheel:1 4
+    100138: wheel:1 5
+    100140: wheel:2
+    100142: wheel:2 1
+    100144: wheel:2 2
+    100146: wheel:2 3
+    100148: wheel:2 4
+    100150: wheel:2 5
+    100152: wheel:3
+    100154: wheel:3 1
+    100156: wheel:3 2
+    100158: wheel:3 3
+    100160: wheel:3 4
+    100162: wheel:3 5
+    100164: wheel:4
+    100166: wheel:4 1
+    100168: wheel:4 2
+    100170: wheel:4 3
+    100172: wheel:4 4
+    100174: wheel:4 5
+    100176: wheel:5
+    100178: wheel:5 1
+    100180: wheel:6
+    100182: wheel:6 1
+    400000: base bottom:1
+    400002: base cover:1
+    400004: base:1
+    400006: battery:1
+    400008: binocular camera:1
+    400010: binocular camera:1 1
+    400012: binocular camera:1 2
+    400014: binocular camera_MIR:1
+    400016: binocular camera_MIR:1 1
+    400018: binocular camera_MIR:1 2
+    400020: board:1
+    400022: box on rod:1
+    400024: camera seat:1
+    400026: chain:1
+    400028: chain:1 1
+    400030: chain:2
+    400032: chain:2 1
+    400034: counterweight:1
+    400036: crawler battery:1
+    400038: front pivot stick:1
+    400040: front right box:1
+    400042: front stablizer:1
+    400044: granade:1
+    400046: granade:2
+    400048: inner tube:1
+    400050: left box:1
+    400052: main rail:1
+    400054: main rail:1 1
+    400056: main track:1
+    400058: main track:1 1
+    400060: main wheel hub:1
+    400062: main wheel hub:1 1
+    400064: //RootNode
+    400066: ohlin:1
+    400068: ohlin_MIR1:1
+    400070: outer tube:1
+    400072: piston inner cylinder:1
+    400074: piston outer cylinder:1
+    400076: rain coat:1
+    400078: rear stablizer:1
+    400080: right top box:1
+    400082: rod:1
+    400084: roll cage:1
+    400086: roll joint:1
+    400088: sealing:1
+    400090: second pitch joint:1
+    400092: shaft:1
+    400094: sheath:1
+    400096: slider chassis:1
+    400098: slider:1
+    400100: stick rail new:1
+    400102: stick rail new:1 1
+    400104: sub rail:1
+    400106: sub rail:1 1
+    400108: sub rail:1 2
+    400110: sub rail:1 3
+    400112: sub track:1
+    400114: sub track:1 1
+    400116: sub track:2
+    400118: sub track:2 1
+    400120: sub wheel hub:1
+    400122: sub wheel hub:1 1
+    400124: sub wheel hub:1 2
+    400126: sub wheel hub:1 3
+    400128: wheel:1
+    400130: wheel:1 1
+    400132: wheel:1 2
+    400134: wheel:1 3
+    400136: wheel:1 4
+    400138: wheel:1 5
+    400140: wheel:2
+    400142: wheel:2 1
+    400144: wheel:2 2
+    400146: wheel:2 3
+    400148: wheel:2 4
+    400150: wheel:2 5
+    400152: wheel:3
+    400154: wheel:3 1
+    400156: wheel:3 2
+    400158: wheel:3 3
+    400160: wheel:3 4
+    400162: wheel:3 5
+    400164: wheel:4
+    400166: wheel:4 1
+    400168: wheel:4 2
+    400170: wheel:4 3
+    400172: wheel:4 4
+    400174: wheel:4 5
+    400176: wheel:5
+    400178: wheel:5 1
+    400180: wheel:6
+    400182: wheel:6 1
+    2300000: base bottom:1
+    2300002: base cover:1
+    2300004: base:1
+    2300006: battery:1
+    2300008: binocular camera:1 1
+    2300010: binocular camera:1 2
+    2300012: binocular camera_MIR:1 1
+    2300014: binocular camera_MIR:1 2
+    2300016: board:1
+    2300018: box on rod:1
+    2300020: camera seat:1
+    2300022: chain:1
+    2300024: chain:1 1
+    2300026: chain:2
+    2300028: chain:2 1
+    2300030: counterweight:1
+    2300032: crawler battery:1
+    2300034: front pivot stick:1
+    2300036: front right box:1
+    2300038: front stablizer:1
+    2300040: granade:1
+    2300042: granade:2
+    2300044: inner tube:1
+    2300046: left box:1
+    2300048: main rail:1
+    2300050: main rail:1 1
+    2300052: main wheel hub:1
+    2300054: main wheel hub:1 1
+    2300056: ohlin:1
+    2300058: ohlin_MIR1:1
+    2300060: outer tube:1
+    2300062: piston inner cylinder:1
+    2300064: piston outer cylinder:1
+    2300066: rain coat:1
+    2300068: rear stablizer:1
+    2300070: right top box:1
+    2300072: rod:1
+    2300074: roll cage:1
+    2300076: roll joint:1
+    2300078: sealing:1
+    2300080: second pitch joint:1
+    2300082: shaft:1
+    2300084: sheath:1
+    2300086: slider chassis:1
+    2300088: slider:1
+    2300090: stick rail new:1
+    2300092: stick rail new:1 1
+    2300094: sub rail:1
+    2300096: sub rail:1 1
+    2300098: sub rail:1 2
+    2300100: sub rail:1 3
+    2300102: sub wheel hub:1
+    2300104: sub wheel hub:1 1
+    2300106: sub wheel hub:1 2
+    2300108: sub wheel hub:1 3
+    2300110: wheel:1
+    2300112: wheel:1 1
+    2300114: wheel:1 2
+    2300116: wheel:1 3
+    2300118: wheel:1 4
+    2300120: wheel:1 5
+    2300122: wheel:2
+    2300124: wheel:2 1
+    2300126: wheel:2 2
+    2300128: wheel:2 3
+    2300130: wheel:2 4
+    2300132: wheel:2 5
+    2300134: wheel:3
+    2300136: wheel:3 1
+    2300138: wheel:3 2
+    2300140: wheel:3 3
+    2300142: wheel:3 4
+    2300144: wheel:3 5
+    2300146: wheel:4
+    2300148: wheel:4 1
+    2300150: wheel:4 2
+    2300152: wheel:4 3
+    2300154: wheel:4 4
+    2300156: wheel:4 5
+    2300158: wheel:5
+    2300160: wheel:5 1
+    2300162: wheel:6
+    2300164: wheel:6 1
+    3300000: base bottom:1
+    3300002: base cover:1
+    3300004: base:1
+    3300006: battery:1
+    3300008: binocular camera:1 1
+    3300010: binocular camera:1 2
+    3300012: binocular camera_MIR:1 1
+    3300014: binocular camera_MIR:1 2
+    3300016: board:1
+    3300018: box on rod:1
+    3300020: camera seat:1
+    3300022: chain:1
+    3300024: chain:1 1
+    3300026: chain:2
+    3300028: chain:2 1
+    3300030: counterweight:1
+    3300032: crawler battery:1
+    3300034: front pivot stick:1
+    3300036: front right box:1
+    3300038: front stablizer:1
+    3300040: granade:1
+    3300042: granade:2
+    3300044: inner tube:1
+    3300046: left box:1
+    3300048: main rail:1
+    3300050: main rail:1 1
+    3300052: main wheel hub:1
+    3300054: main wheel hub:1 1
+    3300056: ohlin:1
+    3300058: ohlin_MIR1:1
+    3300060: outer tube:1
+    3300062: piston inner cylinder:1
+    3300064: piston outer cylinder:1
+    3300066: rain coat:1
+    3300068: rear stablizer:1
+    3300070: right top box:1
+    3300072: rod:1
+    3300074: roll cage:1
+    3300076: roll joint:1
+    3300078: sealing:1
+    3300080: second pitch joint:1
+    3300082: shaft:1
+    3300084: sheath:1
+    3300086: slider chassis:1
+    3300088: slider:1
+    3300090: stick rail new:1
+    3300092: stick rail new:1 1
+    3300094: sub rail:1
+    3300096: sub rail:1 1
+    3300098: sub rail:1 2
+    3300100: sub rail:1 3
+    3300102: sub wheel hub:1
+    3300104: sub wheel hub:1 1
+    3300106: sub wheel hub:1 2
+    3300108: sub wheel hub:1 3
+    3300110: wheel:1
+    3300112: wheel:1 1
+    3300114: wheel:1 2
+    3300116: wheel:1 3
+    3300118: wheel:1 4
+    3300120: wheel:1 5
+    3300122: wheel:2
+    3300124: wheel:2 1
+    3300126: wheel:2 2
+    3300128: wheel:2 3
+    3300130: wheel:2 4
+    3300132: wheel:2 5
+    3300134: wheel:3
+    3300136: wheel:3 1
+    3300138: wheel:3 2
+    3300140: wheel:3 3
+    3300142: wheel:3 4
+    3300144: wheel:3 5
+    3300146: wheel:4
+    3300148: wheel:4 1
+    3300150: wheel:4 2
+    3300152: wheel:4 3
+    3300154: wheel:4 4
+    3300156: wheel:4 5
+    3300158: wheel:5
+    3300160: wheel:5 1
+    3300162: wheel:6
+    3300164: wheel:6 1
+    4300000: board:1
+    4300002: front pivot stick:1
+    4300004: piston inner cylinder:1
+    4300006: piston outer cylinder:1
+    4300008: battery:1
+    4300010: box on rod:1
+    4300012: front stablizer:1
+    4300014: counterweight:1
+    4300016: slider:1
+    4300018: slider chassis:1
+    4300020: granade:1
+    4300022: granade:2
+    4300024: roll cage:1
+    4300026: sheath:1
+    4300028: crawler battery:1
+    4300030: shaft:1
+    4300032: rear stablizer:1
+    4300034: front right box:1
+    4300036: ohlin:1
+    4300038: rod:1
+    4300040: ohlin_MIR1:1
+    4300042: right top box:1
+    4300044: left box:1
+    4300046: stick rail new:1
+    4300048: stick rail new:1
+    4300050: base bottom:1
+    4300052: base:1
+    4300054: outer tube:1
+    4300056: inner tube:1
+    4300058: roll joint:1
+    4300060: base cover:1
+    4300062: second pitch joint:1
+    4300064: camera seat:1
+    4300066: binocular camera:1
+    4300068: binocular camera:1
+    4300070: binocular camera_MIR:1
+    4300072: binocular camera_MIR:1
+    4300074: rain coat:1
+    4300076: sealing:1
+    4300078: wheel:1
+    4300080: wheel:2
+    4300082: wheel:3
+    4300084: wheel:4
+    4300086: wheel:5
+    4300088: wheel:6
+    4300090: main wheel hub:1
+    4300092: main rail:1
+    4300094: wheel:1
+    4300096: wheel:2
+    4300098: wheel:3
+    4300100: wheel:4
+    4300102: sub wheel hub:1
+    4300104: sub rail:1
+    4300106: wheel:1
+    4300108: wheel:2
+    4300110: wheel:3
+    4300112: wheel:4
+    4300114: sub wheel hub:1
+    4300116: sub rail:1
+    4300118: chain:1
+    4300120: chain:2
+    4300122: wheel:1
+    4300124: wheel:2
+    4300126: wheel:3
+    4300128: wheel:4
+    4300130: wheel:5
+    4300132: wheel:6
+    4300134: main wheel hub:1
+    4300136: main rail:1
+    4300138: wheel:1
+    4300140: wheel:2
+    4300142: wheel:3
+    4300144: wheel:4
+    4300146: sub wheel hub:1
+    4300148: sub rail:1
+    4300150: wheel:1
+    4300152: wheel:2
+    4300154: wheel:3
+    4300156: wheel:4
+    4300158: sub wheel hub:1
+    4300160: sub rail:1
+    4300162: chain:1
+    4300164: chain:2
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

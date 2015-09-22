@@ -15,14 +15,16 @@ public abstract class VRGUI : MonoBehaviour
 	public RenderTexture guiRenderTexture  = null;
 	private Vector2       cursorPosition    = Vector2.zero;
 	private Texture       cursor            = null;
-	
+	public Material RenderMat;
+	public Camera TargetCamera;
+
 	private bool isInitialized = false;
 	
 	private void Initialize () 
 	{
-		/*
+
 		// create the render plane
-		if (useCurvedSurface)
+		/*if (useCurvedSurface)
 		{
 			guiRenderPlane = Instantiate(Resources.Load("VRGUICurvedSurface")) as GameObject;
 		}
@@ -30,7 +32,7 @@ public abstract class VRGUI : MonoBehaviour
 		{
 			guiRenderPlane = Instantiate(Resources.Load("VRGUIFlatSurface")) as GameObject;
 		}*/
-
+		/*
 		guiRenderPlane = new GameObject ("VRGUI_Plane");
 
 		guiRenderPlane.AddComponent<MeshRenderer> ();
@@ -63,16 +65,16 @@ public abstract class VRGUI : MonoBehaviour
 		guiRenderPlane.transform.localPosition = guiPosition;
 		guiRenderPlane.transform.localRotation = Quaternion.Euler (0f, 180f, 0f);
 		guiRenderPlane.transform.localScale = new Vector3 (guiSize, guiSize, guiSize);
-
+*/
 		// create the render texture
 		guiRenderTexture = new RenderTexture (Screen.width, Screen.height, 24);
 		
-		Material mat = new Material ("");
-		mat.shader=Shader.Find ("VRGUITransparentOverlayShader");
+		RenderMat = new Material ("");
+		RenderMat.shader=Shader.Find ("VRGUITransparentOverlayShader");
 
 		// assign the render texture to the render plane
-		guiRenderPlane.GetComponent<MeshRenderer> ().material = mat;
-		guiRenderPlane.GetComponent<MeshRenderer>().material.mainTexture = guiRenderTexture;
+		//guiRenderPlane.GetComponent<MeshRenderer> ().material = mat;
+		//guiRenderPlane.GetComponent<MeshRenderer>().material.mainTexture = guiRenderTexture;
 		
 		if (acceptMouse)
 		{
@@ -114,17 +116,19 @@ public abstract class VRGUI : MonoBehaviour
 		if (guiRenderTexture.width != w || guiRenderTexture.height != h) {
 			guiRenderTexture = new RenderTexture (w,h, 24,RenderTextureFormat.Default);
 		}
+		//guiRenderPlane.GetComponent<MeshRenderer>().material.mainTexture = guiRenderTexture;
 	}
-	protected void OnGUI()
+	public void OnGUI()
 	{
 		if (!isInitialized)
 		{
 			Initialize();
 		}
 
-		if(Camera.current!=null)
-			_Resize ((int)Camera.current.pixelWidth,(int)Camera.current.pixelHeight);
+		if(TargetCamera!=null)
+			_Resize ((int)TargetCamera.pixelWidth,(int)TargetCamera.pixelHeight);
 		// handle mouse events
+		/*
 		if (Event.current.isMouse)
 		{
 			// return if not accepting mouse events
@@ -147,7 +151,7 @@ public abstract class VRGUI : MonoBehaviour
 			{
 				return;
 			}
-		}
+		}*/
 		
 		// save current render texture
 		RenderTexture tempRenderTexture = RenderTexture.active; 
@@ -156,12 +160,12 @@ public abstract class VRGUI : MonoBehaviour
 		if (Event.current.type == EventType.Repaint)
 		{			
 			RenderTexture.active = guiRenderTexture;
-			GL.Clear (false, true, new Color (0.0f, 0.0f, 0.0f, 0.0f));
+			GL.Clear (true, true, new Color (0.0f, 0.0f, 0.0f, 0.0f));
 		}
 		
 		// draw the VRGUI
 		OnVRGUI();
-		
+		/*
 		if (Event.current.type == EventType.Repaint)
 		{	
 			if (acceptMouse)
@@ -170,7 +174,9 @@ public abstract class VRGUI : MonoBehaviour
 				GUI.DrawTexture(new Rect(cursorPosition.x, cursorPosition.y, cursorSize, cursorSize), 
 					cursor, ScaleMode.StretchToFill);
 			}
-			
+
+		}*/
+		if (Event.current.type == EventType.Repaint) {			
 			// restore the previous render texture
 			RenderTexture.active = tempRenderTexture;
 		}

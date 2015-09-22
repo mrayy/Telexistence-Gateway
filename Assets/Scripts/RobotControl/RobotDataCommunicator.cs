@@ -30,6 +30,8 @@ public class RobotDataCommunicator {
 	public enum ERobotControllerStatus
 	{
 		EStopped,
+		EIniting,
+		EStopping,
 		EDisconnected,
 		EConnected,
 		EConnecting,
@@ -70,6 +72,7 @@ public class RobotDataCommunicator {
 	public delegate void Delg_OnBatteryLevel(int level);
 	public delegate void Delg_OnMessage(int message,BinaryReader reader);
 	public delegate void Delg_OnRobotInfoDetected(RobotInfo ifo);
+	public delegate void Delg_OnRobotStatus(ERobotControllerStatus status);
 
 
 	public event Delg_OnCameraConfig OnCameraConfig;
@@ -80,6 +83,7 @@ public class RobotDataCommunicator {
 	public event Delg_OnMessage OnMessage;
 	public event Delg_OnBatteryLevel OnBatteryLevel;
 	public event Delg_OnRobotInfoDetected OnRobotInfoDetected;
+	public event Delg_OnRobotStatus OnRobotStatus;
 
 	public RobotDataCommunicator()
 	{
@@ -180,6 +184,13 @@ public class RobotDataCommunicator {
 				OnBatteryLevel(reader.ReadInt32());
 			break;
 		case (int)Messages.ClockSync:
+			break;
+		case (int)Messages.RobotStatus:
+			if(OnRobotStatus!=null)
+			{
+				int val=reader.ReadInt32();
+				OnRobotStatus((ERobotControllerStatus)val);
+			}
 			break;
 
 		default:

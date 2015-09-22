@@ -29,7 +29,7 @@ public class RemoteRobotCommunicator : IRobotCommunicator,IDisposable {
 				}
 				if(owner._userInfo.RobotConnected && owner._connected)
 				{
-					Thread.Sleep(33);
+					Thread.Sleep(10);
 				}else
 				{
 					Thread.Sleep(100);

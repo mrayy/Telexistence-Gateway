@@ -62,6 +62,40 @@ public class LeapImageRetriever : MonoBehaviour {
     private Texture2D _distortion = null;
     private Color32[] _distortionPixels = null;
 
+	//Added
+
+	public Texture2D MainTexture
+	{
+		get
+		{
+			return _mainTexture;
+		}
+	}
+	public byte[] MainTextureData
+	{
+		get
+		{
+			return _mainTextureData;
+		}
+	}
+	
+	public int Width
+	{
+		get
+		{
+			return _currentWidth;
+		}
+	}
+	public int Height
+	{
+		get
+		{
+			return _currentHeight;
+		}
+	}
+
+	// END ADDED
+
     public static void registerImageBasedMaterial(LeapImageBasedMaterial imageBasedMaterial) {
         _registeredImageBasedMaterials.Add(imageBasedMaterial);
         _imageBasedMaterialsToInit.Add(imageBasedMaterial);
