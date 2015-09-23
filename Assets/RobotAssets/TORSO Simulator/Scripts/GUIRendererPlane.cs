@@ -52,6 +52,7 @@ public class GUIRendererPlane : MonoBehaviour {
 		renderPlane.transform.parent= OculusCenter;
 
 		renderPlane.transform.localPosition = new Vector3 (0, 0, 1);
+		renderPlane.transform.localRotation = Quaternion.identity;
 
 	}
 	

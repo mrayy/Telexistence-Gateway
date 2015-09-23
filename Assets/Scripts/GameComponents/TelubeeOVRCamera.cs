@@ -1,6 +1,8 @@
 ﻿
 using UnityEngine;
 using System.Collections;
+using System.Xml;
+using System.IO;
 
 public class TelubeeOVRCamera : MonoBehaviour {
 
@@ -17,16 +19,20 @@ public class TelubeeOVRCamera : MonoBehaviour {
 
 	public TELUBeeConfiguration Configuration;
 
+	RobotConnectionComponent _Connection;
+
 	public DebugInterface Debugger;
 
-	GameObject[] _RenderPlane=new GameObject[2];
     ICameraSource _cameraSource;
+	GstMultipleNetworkAudioPlayer _audioPlayer;
 
 	TelubeeCameraRenderer[] _camRenderer=new TelubeeCameraRenderer[2];
 
 	DebugCameraCaptureElement _cameraDebugElem;
 
 	string _remoteHostIP;
+
+	string _cameraProfile="";
 
 	public string RemoteHostIP
 	{
@@ -67,6 +73,7 @@ public class TelubeeOVRCamera : MonoBehaviour {
 			c.Init();
 		}
 
+		_audioPlayer = new GstMultipleNetworkAudioPlayer ();
 
 		EyeName[] eyes = new EyeName[]{EyeName.RightEye,EyeName.LeftEye};
         if (OculusCamera != null)
@@ -79,66 +86,31 @@ public class TelubeeOVRCamera : MonoBehaviour {
 				int i = (int)eyes[c];
 				cams[i].backgroundColor=Color.black;
 
-				CreateMesh ((EyeName)i);
+			//	CreateMesh ((EyeName)i);
                 TelubeeCameraRenderer r = cams[i].gameObject.AddComponent<TelubeeCameraRenderer>();
                 r.Mat = TargetMaterial;
-				r._RenderPlane = _RenderPlane[i];
 				r.DisplayCamera=cams[i];
-				r.Eye = eyes[c];
 				r.Src = this;
-			//	r.PixelShift=pixelShift[i];
+				r.CamSource = _cameraSource;
+
+				r.CreateMesh(eyes[c]);
 
 				_camRenderer[i]=r;
 
-				r.CamSource = _cameraSource;
                 if (i == 0)
                 {
-					_RenderPlane[i].layer=LayerMask.NameToLayer("RightEye");
+					r._RenderPlane.layer=LayerMask.NameToLayer("RightEye");
                 }
                 else
                 {
-					_RenderPlane[i].layer=LayerMask.NameToLayer("LeftEye");
+					r._RenderPlane.layer=LayerMask.NameToLayer("LeftEye");
 				}
-				_RenderPlane[i].transform.parent = cams[i].transform;
-				_RenderPlane[i].transform.localRotation=Quaternion.identity;
-				_RenderPlane[i].transform.localPosition=new Vector3(0,0,1);
+				r._RenderPlane.transform.parent = cams[i].transform;
+				r._RenderPlane.transform.localRotation=Quaternion.identity;
+				r._RenderPlane.transform.localPosition=new Vector3(0,0,1);
             }
         }
     }
-	void CreateMesh(EyeName eye )
-	{
-		int i = (int)eye;
-		_RenderPlane[i] = new GameObject("EyesRenderPlane_"+eye.ToString());
-		MeshFilter mf = _RenderPlane[i].AddComponent<MeshFilter> ();
-		MeshRenderer mr = _RenderPlane[i].AddComponent<MeshRenderer> ();
-
-		mr.material = TargetMaterial;
-		mf.mesh.vertices = new Vector3[]{
-			new Vector3( 1,-1,0),
-			new Vector3(-1,-1,0),
-			new Vector3(-1, 1,0),
-			new Vector3( 1, 1,0)
-		};
-		Rect r = _cameraSource.GetEyeTextureCoords (eye);
-		Vector2[] uv = new Vector2[]{
-			new Vector2(r.x,r.y),
-			new Vector2(r.x+r.width,r.y),
-			new Vector2(r.x+r.width,r.y+r.height),
-			new Vector2(r.x,r.y+r.height),
-		};
-		if (Configuration.CamSettings.Flipped) {
-			for(int v=0;v<4;++v)
-			{
-				uv[v]=Vector2.one-uv[v];
-			}
-		}
-		mf.mesh.uv = uv;
-		mf.mesh.triangles = new int[]
-		{
-			0,2,1,0,3,2
-		};
-		_RenderPlane[i].transform.localPosition =new Vector3 (0, 0, 1);
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -153,14 +125,40 @@ public class TelubeeOVRCamera : MonoBehaviour {
 				TargetMaterial.SetVector("FocalLength",Configuration.CamSettings.FocalLength);
 				TargetMaterial.SetVector("LensCenter",Configuration.CamSettings.LensCenter);
 
-				Vector4 WrapParams=new Vector4(Configuration.CamSettings.K1,Configuration.CamSettings.K2,
-				                               Configuration.CamSettings.P1,Configuration.CamSettings.P2);
-				TargetMaterial.SetVector("WrapParams",WrapParams);
+			//	Vector4 WrapParams=new Vector4(Configuration.CamSettings.KPCoeff.x,Configuration.CamSettings.KPCoeff.y,
+			//	                               Configuration.CamSettings.KPCoeff.z,Configuration.CamSettings.KPCoeff.w);
+				TargetMaterial.SetVector("WrapParams",Configuration.CamSettings.KPCoeff);
 			}
+		}
+
+		if (_cameraProfile != "") {
+			
+			XmlReader reader = XmlReader.Create (new StringReader (_cameraProfile));
+			while (reader.Read()) {
+				if(reader.NodeType==XmlNodeType.Element)
+				{
+					Configuration.CamSettings.LoadXML (reader);
+					_camRenderer[0].CreateMesh(EyeName.LeftEye);
+					_camRenderer[1].CreateMesh(EyeName.RightEye);
+					break;
+				}
+			}
+			_cameraProfile="";
 		}
 	}
 
-	public void SetRemoteHost(string IP,int port)
+	public void SetConnectionComponent(RobotConnectionComponent connection)
+	{
+		_Connection = connection;
+		_Connection.Connector.DataCommunicator.OnCameraConfig += OnCameraConfig;
+	}
+	void OnCameraConfig(string cameraProfile)
+	{
+		_cameraProfile = cameraProfile;
+
+		//Debug.Log (cameraProfile);
+	}
+	public void SetRemoteHost(string IP,RobotConnector.TargetPorts ports)
 	{
 		if (_cameraSource != null) {
 			_cameraSource.Close();
@@ -181,8 +179,13 @@ public class TelubeeOVRCamera : MonoBehaviour {
 			c.StreamsCount = 2;
 			c.TargetNode = gameObject;
 			c.Host = IP;
-			c.port = port;
+			c.port = ports.VideoPort;
 			c.Init ();
+
+			_audioPlayer.SetIP(IP,ports.AudioPort,false);
+			_audioPlayer.CreateStream();
+			_audioPlayer.Play();
+
 			for(int i=0;i<2;++i)
 				_camRenderer[i].CamSource=_cameraSource;
 			if (Debugger) {
@@ -192,5 +195,9 @@ public class TelubeeOVRCamera : MonoBehaviour {
 			}
 		}
 
+		{
+			//request camera settings
+			_Connection.Connector.SendData("CameraParameters","",false);
+		}
 	}
 }

@@ -69,6 +69,7 @@ public class RobotDataCommunicator {
 	public delegate void Delg_OnReportMessage(int code,string msg);
 	public delegate void Delg_OnBumpSensor(float[] v);
 	public delegate void Delg_OnIRSensor(float[] v);
+	public delegate void Delg_OnJointValues(float[] v);
 	public delegate void Delg_OnBatteryLevel(int level);
 	public delegate void Delg_OnMessage(int message,BinaryReader reader);
 	public delegate void Delg_OnRobotInfoDetected(RobotInfo ifo);
@@ -84,6 +85,7 @@ public class RobotDataCommunicator {
 	public event Delg_OnBatteryLevel OnBatteryLevel;
 	public event Delg_OnRobotInfoDetected OnRobotInfoDetected;
 	public event Delg_OnRobotStatus OnRobotStatus;
+	public event Delg_OnJointValues OnJointValues;
 
 	public RobotDataCommunicator()
 	{
@@ -184,6 +186,18 @@ public class RobotDataCommunicator {
 				OnBatteryLevel(reader.ReadInt32());
 			break;
 		case (int)Messages.ClockSync:
+			break;
+		case (int)Messages.JointValues:
+			if(OnJointValues!=null)
+			{
+				int count=reader.ReadInt32();
+				float[] values=new float[count];
+				for(int i=0;i<count;++i)
+				{
+					values[i]=reader.ReadSingle();
+				}
+				OnJointValues(values);
+			}
 			break;
 		case (int)Messages.RobotStatus:
 			if(OnRobotStatus!=null)

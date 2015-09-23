@@ -23,7 +23,57 @@ public class TelubeeCameraRenderer : MonoBehaviour {
 	void Update () {
 	
 	}
-
+	
+	public void CreateMesh(EyeName eye )
+	{
+		Eye = eye;
+		int i = (int)eye;
+		if(_RenderPlane==null)
+			_RenderPlane = new GameObject("EyesRenderPlane_"+eye.ToString());
+		MeshFilter mf = _RenderPlane.GetComponent<MeshFilter> ();
+		if (mf == null) {
+			mf = _RenderPlane.AddComponent<MeshFilter> ();
+		}
+		MeshRenderer mr = _RenderPlane.GetComponent<MeshRenderer> ();
+		if (mr == null) {
+			mr = _RenderPlane.AddComponent<MeshRenderer> ();
+		}
+		
+		mr.material = Mat;
+		mf.mesh.vertices = new Vector3[]{
+			new Vector3( 1,-1,0),
+			new Vector3(-1,-1,0),
+			new Vector3(-1, 1,0),
+			new Vector3( 1, 1,0)
+		};
+		Rect r = CamSource.GetEyeTextureCoords (eye);
+		Vector2[] uv = new Vector2[]{
+			new Vector2(r.x,r.y),
+			new Vector2(r.x+r.width,r.y),
+			new Vector2(r.x+r.width,r.y+r.height),
+			new Vector2(r.x,r.y+r.height),
+		};
+		Matrix4x4 rotMat = Matrix4x4.identity;
+		if (Src.Configuration.CamSettings.Rotation [i] == CameraConfigurations.ECameraRotation.Flipped) {
+			rotMat = Matrix4x4.TRS (Vector3.zero, Quaternion.Euler (0, 0, 180), Vector3.one);
+		} else if (Src.Configuration.CamSettings.Rotation [i] == CameraConfigurations.ECameraRotation.CW) {
+			rotMat = Matrix4x4.TRS (Vector3.zero, Quaternion.Euler (0, 0, 90), Vector3.one);
+		} else if (Src.Configuration.CamSettings.Rotation [i] == CameraConfigurations.ECameraRotation.CCW) {
+			rotMat = Matrix4x4.TRS (Vector3.zero, Quaternion.Euler (0, 0, -90), Vector3.one);
+		}
+		for(int v=0;v<4;++v)
+		{
+			Vector3 res=rotMat*(2*uv[v]-Vector2.one);
+			uv[v]=(new Vector2(res.x,res.y)+Vector2.one)*0.5f;//Vector2.one-uv[v];
+		}
+		mf.mesh.uv = uv;
+		mf.mesh.triangles = new int[]
+		{
+			0,2,1,0,3,2
+		};
+		transform.localPosition =new Vector3 (0, 0, 1);
+		transform.localRotation =Quaternion.identity;
+	}
 	void OnPreRender()
 	{
 		_RenderedTexture = CamSource.GetEyeTexture (Eye);

@@ -18,6 +18,9 @@ public class RobotConnectionComponent : MonoBehaviour {
 
 	RobotInfo _RobotIP;
 
+	float[] _RobotJointValues;
+
+
 	RobotDataCommunicator.ERobotControllerStatus _robotStatus=RobotDataCommunicator.ERobotControllerStatus.EStopped;
 	public RobotDataCommunicator.ERobotControllerStatus RobotStatus
 	{
@@ -47,6 +50,11 @@ public class RobotConnectionComponent : MonoBehaviour {
 			return _connector;
 		}
 	}
+	public float[] RobotJointValues {
+		get {
+			return _RobotJointValues;
+		}
+	}
 	// Use this for initialization
 	void Start () {
 		_connector = new RobotConnector ();
@@ -66,6 +74,7 @@ public class RobotConnectionComponent : MonoBehaviour {
 		_connector.DataCommunicator.OnMessage += OnMessage;
 		_connector.DataCommunicator.OnRobotInfoDetected += OnRobotInfoDetected;
 		_connector.DataCommunicator.OnRobotStatus += OnRobotStatus;
+		_connector.DataCommunicator.OnJointValues += OnJointValues;
 
 		_connector.StartDataCommunicator (Settings.Instance.TargetPorts.CommPort);
 
@@ -77,6 +86,8 @@ public class RobotConnectionComponent : MonoBehaviour {
 			Debugger.AddDebugElement(new DebugRobotStatus(this));
 		}
 
+		VideoStream.SetConnectionComponent (this);
+
 
 	}
 	void OnMessage(int message,BinaryReader reader)
@@ -87,6 +98,11 @@ public class RobotConnectionComponent : MonoBehaviour {
 			
 		//	Debug.Log ("Robot Status: " + ((RobotDataCommunicator.ERobotControllerStatus)status).ToString());
 		}
+	}
+
+	void OnJointValues(float[] values)
+	{
+		_RobotJointValues = values;
 	}
 
 	void OnRobotStatus(RobotDataCommunicator.ERobotControllerStatus status)
@@ -116,7 +132,7 @@ public class RobotConnectionComponent : MonoBehaviour {
 		_connector.NullValues = NullValues;
 		_connector.Update ();
 
-		if (Input.GetKeyDown (KeyCode.C)) {
+		if (Input.GetButtonDown ("ConnectRobot")) {
 			if(IsConnected)
 				DisconnectRobot();
 			else
@@ -124,19 +140,20 @@ public class RobotConnectionComponent : MonoBehaviour {
 				Connect();
 			}
 		}
-		if (IsConnected && Input.GetKeyDown (KeyCode.Space)) {
+		if (IsConnected && Input.GetButtonDown ("StartRobot")) {
 			_connector.Recalibrate();
 			if(!_connector.IsRobotConnected)
 				StartUpdate();
 			else
 				EndUpdate();
 		}
-		if (Input.GetKeyDown (KeyCode.R)) {
+		if (Input.GetButtonDown ("CalibrateRobot"))  {
 			_connector.Recalibrate();
 		}
 
 		if (IsConnected) {
 			_connector.SendData("query","",false);
+			_connector.SendData("jointVals","",false);
 		}
 	}
 
@@ -155,7 +172,7 @@ public class RobotConnectionComponent : MonoBehaviour {
 		_connected=true;
 
 		if (VideoStream != null) {
-			VideoStream.SetRemoteHost(_RobotIP.IP,ports.VideoPort);
+			VideoStream.SetRemoteHost(_RobotIP.IP,ports);
 		}
 
 		LogSystem.Instance.Log ("Connecting to Robot:" + _RobotIP.Name, LogSystem.LogType.Info);

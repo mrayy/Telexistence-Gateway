@@ -10,6 +10,7 @@ public class NewMove: MonoBehaviour {
 	}
 
 	void Update() {
+		/*
 		float h = Input.GetAxis("Horizontal");
 		float v = Input.GetAxis("Vertical");
 
@@ -31,6 +32,6 @@ public class NewMove: MonoBehaviour {
 
 		if (Input.GetKey (KeyCode.D)) {
 			GetComponent<Rigidbody>().AddTorque(transform.up * h * turnSpeed, ForceMode.Force);
-		}
+		}*/
 	}
 }

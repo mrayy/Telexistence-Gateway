@@ -216,8 +216,10 @@ public class RemoteRobotCommunicator : IRobotCommunicator,IDisposable {
 	public override void ConnectRobot(bool c)
 	{
 		_userInfo.RobotConnected = c;
-		SetData("RobotConnect", c.ToString(),true);
-		_SendUpdate ();
+		lock (_values) {
+			SetData ("RobotConnect", c.ToString (), true);
+			_SendUpdate ();
+		}
 	}
 
 	public override string GetData(string key)
@@ -238,17 +240,19 @@ public class RemoteRobotCommunicator : IRobotCommunicator,IDisposable {
 		di.value = value;
 		lock(_values)
 		{
-			_values [key] = di;
+			if(!_values.ContainsKey(key))
+				_values.Add(key,di);
+			else _values[key]=di;
+			_UpdateData();
 		}
-		_UpdateData();
 	}
 	public override void RemoveData(string key) 
 	{
 		lock(_values)
 		{
 			_values.Remove (key);
+			_UpdateData ();
 		}
-		_UpdateData ();
 	}
 	public override void ClearData(bool statusValues)
 	{

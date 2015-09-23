@@ -20,7 +20,19 @@ public class DebugRobotStatus : DebugInterface.IDebugElement {
 			str += "Robot Status: " + Robot.RobotStatus + "\n";
 		}
 		str+="Head Position= " + _connector.HeadPosition.ToString()+"\n";
-		str+= "Head Rotation= " + _connector.HeadRotation.eulerAngles.ToString();
+		str+= "Head Rotation= " + _connector.HeadRotation.eulerAngles.ToString()+"\n";
+
+		float[] jv = Robot.RobotJointValues;
+		if (jv != null) {
+			str+="Robot Joint Values: \n";
+			for(int i=0;i<jv.Length;)
+			{
+				str+=jv[i].ToString() + "/ " +jv[i+1];
+				if(i!=jv.Length-2)
+					str+="\n";
+				i+=2;
+			}
+		}
 		return str;
 	}
 }

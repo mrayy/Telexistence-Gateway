@@ -6,11 +6,11 @@ public class VirtualRuler : MonoBehaviour {
 
 	public Camera TargetCamera;
 	public float Distance;
-	public float Radius;
+	public float Size;
 	public Material RenderMaterial;
 	bool showText = true;
 
-	float _lastRadius;
+	float _lastSize;
 
 	public UILabel DistanceLabel;
 	public UILabel SizeLabel;
@@ -25,8 +25,9 @@ public class VirtualRuler : MonoBehaviour {
 		MeshRenderer r= gameObject.AddComponent<MeshRenderer> ();
 		MeshFilter mf= gameObject.AddComponent<MeshFilter> ();
 
+		//_lastSize = Size;
 		r.material = RenderMaterial;
-		mf.mesh = MeshGenerator.GenerateTorus (0.05f,40, 0.05f, _lastRadius);
+		mf.mesh = MeshGenerator.GenerateTorus (0.05f,40, 0.01f, _lastSize/2);
 		transform.localRotation = Quaternion.Euler(90,0,0);
 
 		SetVisible (false);
@@ -45,30 +46,31 @@ public class VirtualRuler : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector2 pos;
+		//Vector2 pos;
 
 		if (_Visible) {
 			transform.localPosition = new Vector3 (0, 0, Distance);
 
-			pos = ProjectPoint (Vector3.forward * 10);
-			DistanceLabel.text = "Distance:" + ToMetric (Distance);
-			DistanceLabel.transform.localPosition = new Vector3 (pos.x, pos.y, 0);
+			_distancePos = ProjectPoint (Vector3.forward * 10);
+			DistanceLabel.text = "距離:" + ToMetric (Distance);
+			DistanceLabel.transform.localPosition = new Vector3 (_distancePos.x, _distancePos.y, 0);
 		
-			pos = ProjectPoint (new Vector3 (Radius, 0, Distance));
-			SizeLabel.text = "Size:" + ToMetric (Radius);
-			SizeLabel.transform.localPosition = new Vector3 (pos.x, pos.y, 0);
+			_sizePos = ProjectPoint (new Vector3 (_lastSize/2, 0, Distance));
+			SizeLabel.text = "サイズ:" + ToMetric (Size);
+			SizeLabel.transform.localPosition = new Vector3 (_sizePos.x, _sizePos.y, 0);
 
-			if (Radius != _lastRadius) {
+			if (Size != _lastSize) {
 				MeshFilter mf = gameObject.GetComponent<MeshFilter> ();
-				_lastRadius = Radius;
-				MeshGenerator.ScaleTorus (mf.mesh, 0.1f, _lastRadius * 0.1f, _lastRadius, 40);
+				_lastSize = Size;
+				MeshGenerator.ScaleTorus (mf.mesh, 0.01f, _lastSize * 0.01f, _lastSize/2, 40);
 			}
-
-			Distance += ((Input.GetKey (KeyCode.UpArrow) ? 1 : 0) - (Input.GetKey (KeyCode.DownArrow) ? 1 : 0)) * Time.deltaTime;
-			Radius += ((Input.GetKey (KeyCode.RightArrow) ? 1 : 0) - (Input.GetKey (KeyCode.LeftArrow) ? 1 : 0)) * Time.deltaTime;
+			float dx=((Input.GetKey (KeyCode.UpArrow) ? 1 : 0) - (Input.GetKey (KeyCode.DownArrow) ? 1 : 0));
+			float dy=((Input.GetKey (KeyCode.RightArrow) ? 1 : 0) - (Input.GetKey (KeyCode.LeftArrow) ? 1 : 0));
+			Distance += dx * Time.deltaTime;
+			Size += dy * Time.deltaTime;
 
 			Distance = Mathf.Max (0.0f, Distance);
-			Radius = Mathf.Max (0.0f, Radius);
+			Size = Mathf.Max (0.0f, Size);
 		}
 		if (Input.GetKeyDown (KeyCode.V)) {
 			SetVisible(!_Visible);
@@ -87,8 +89,7 @@ public class VirtualRuler : MonoBehaviour {
 			value=v/1000.0f;
 			unit=" km";
 		}
-		value = (int)(value * 100) * 0.01f;
-		return value.ToString () + unit;
+		return value.ToString ("0.0") + unit;
 	}
 	/*
 	void DrawCross(Vector2 pos,float size)
@@ -119,8 +120,8 @@ public class VirtualRuler : MonoBehaviour {
 	Vector2 ProjectPoint(Vector3 pos)
 	{
 		Vector2 ret = TargetCamera.WorldToScreenPoint (TargetCamera.transform.position + TargetCamera.transform.rotation * pos);
-		ret.x -= TargetCamera.pixelWidth / 2;
-		ret.y -= TargetCamera.pixelHeight / 2;
+		ret.x -= TargetCamera.pixelWidth / 2 + TargetCamera.pixelRect.xMin;
+		ret.y -= TargetCamera.pixelHeight / 2  + TargetCamera.pixelRect.yMin;
 		return ret;
 
 	}
@@ -150,8 +151,8 @@ public class VirtualRuler : MonoBehaviour {
 
 	void DrawSize()
 	{
-		string str="Size:"+ToMetric(Radius);
-		_sizePos= DrawString(str,new Vector3(Radius,0,Distance),Color.green,new Vector2(0,15));
+		string str="Size:"+ToMetric(Size);
+		_sizePos= DrawString(str,new Vector3(Size/2,0,Distance),Color.green,new Vector2(0,15));
 	}
 	 void OnOVRGUI()
 	{

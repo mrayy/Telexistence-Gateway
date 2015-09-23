@@ -215,7 +215,7 @@ public class TorsoController : MonoBehaviour {
 
 		BaseZ.localPosition = new Vector3(0,m_targetAngles [2],0);
 
-		if (Input.GetKeyDown (KeyCode.Space)) {
+		if (Input.GetButtonDown ("CalibrateRobot")) {
 			m_calibrated = false;
 		}
 		if(!m_calibrated)

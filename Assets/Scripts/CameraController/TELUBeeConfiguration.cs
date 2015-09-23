@@ -3,7 +3,7 @@ using System.Collections;
 using System;
 
 public class TELUBeeConfiguration : MonoBehaviour {
-
+	/*
 	[Serializable]
 	public class CameraSettings
 	{
@@ -17,9 +17,10 @@ public class TELUBeeConfiguration : MonoBehaviour {
 		public Vector2 PixelShiftRight= Vector2.zero;
 		public float Focal=1;
 		public bool Flipped=false;
-	}
 
-	public CameraSettings CamSettings;
+	}*/
+
+	public CameraConfigurations CamSettings;
 
 	// Use this for initialization
 	void Start () {
