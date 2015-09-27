@@ -4,10 +4,13 @@ using System.Collections;
 public class OculusHeadController : IRobotHeadControl {
 
 	Quaternion _initial;
-	Vector3 _neckOffset;
+	Vector3 _neckOffset=Vector3.zero;
 
 	public OculusHeadController()
 	{
+		if (Ovr.Hmd.Detect () == 0) {
+			return;
+		}
 		float[] neckOffset = new float[] {
 			Ovr.Hmd.OVR_DEFAULT_NECK_TO_EYE_HORIZONTAL,
 			Ovr.Hmd.OVR_DEFAULT_NECK_TO_EYE_VERTICAL

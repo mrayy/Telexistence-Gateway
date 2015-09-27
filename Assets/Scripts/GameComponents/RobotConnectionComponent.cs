@@ -9,7 +9,7 @@ public class RobotConnectionComponent : MonoBehaviour {
 	public AppManager.HeadControllerType HeadControllerType;
 	public AppManager.BaseControllerType BaseControllerType;
 
-	public TelubeeOVRCamera VideoStream;
+	//public TelubeeOVRCamera VideoStream;
 	public DebugInterface Debugger;
 
 	public bool NullValues=false;
@@ -20,6 +20,12 @@ public class RobotConnectionComponent : MonoBehaviour {
 
 	float[] _RobotJointValues;
 
+
+	public delegate void Delg_OnRobotConnected(RobotConnector.TargetPorts ports);
+	public event Delg_OnRobotConnected OnRobotConnected;
+	
+	public delegate void Delg_OnRobotDisconnected();
+	public event Delg_OnRobotDisconnected OnRobotDisconnected;
 
 	RobotDataCommunicator.ERobotControllerStatus _robotStatus=RobotDataCommunicator.ERobotControllerStatus.EStopped;
 	public RobotDataCommunicator.ERobotControllerStatus RobotStatus
@@ -86,7 +92,7 @@ public class RobotConnectionComponent : MonoBehaviour {
 			Debugger.AddDebugElement(new DebugRobotStatus(this));
 		}
 
-		VideoStream.SetConnectionComponent (this);
+		//VideoStream.SetConnectionComponent (this);
 
 
 	}
@@ -170,9 +176,13 @@ public class RobotConnectionComponent : MonoBehaviour {
 		ports.RobotIP = _RobotIP.IP;
 		_connector.ConnectRobotIP (ports);
 		_connected=true;
-
+/*
 		if (VideoStream != null) {
 			VideoStream.SetRemoteHost(_RobotIP.IP,ports);
+		}*/
+
+		if (OnRobotConnected!=null) {
+			OnRobotConnected(ports);
 		}
 
 		LogSystem.Instance.Log ("Connecting to Robot:" + _RobotIP.Name, LogSystem.LogType.Info);
@@ -183,6 +193,9 @@ public class RobotConnectionComponent : MonoBehaviour {
 		if (!_connected)
 			return;
 		_connector.DisconnectRobot ();
+		if (OnRobotDisconnected != null) {
+			OnRobotDisconnected();
+		}
 		_connected = false;
 		LogSystem.Instance.Log ("Disconnecting Robot:" + _RobotIP.Name, LogSystem.LogType.Info);
 	}

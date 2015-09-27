@@ -214,6 +214,8 @@ public class RobotConnector:IDisposable{
 
 	public void SendData(string name,string value,bool statusData=false)
 	{
+		if (RobotCommunicator==null)
+			return;
 		RobotCommunicator.SetData (name,value,statusData);
 	}
 

@@ -17,9 +17,11 @@ public class TelubeeOVRCamera : MonoBehaviour {
 	public DisplayConfigurations Display;
     public CameraSourceType CameraType;
 
+	public RobotConnectionComponent RobotConnector;
+
 	public TELUBeeConfiguration Configuration;
 
-	RobotConnectionComponent _Connection;
+//	RobotConnectionComponent _Connection;
 
 	public DebugInterface Debugger;
 
@@ -52,6 +54,8 @@ public class TelubeeOVRCamera : MonoBehaviour {
             Init();
 
 
+		RobotConnector.OnRobotConnected += OnRobotConnected;
+		RobotConnector.Connector.DataCommunicator.OnCameraConfig += OnCameraConfig;
 	}
 
 
@@ -146,17 +150,22 @@ public class TelubeeOVRCamera : MonoBehaviour {
 			_cameraProfile="";
 		}
 	}
-
+	/*
 	public void SetConnectionComponent(RobotConnectionComponent connection)
 	{
 		_Connection = connection;
 		_Connection.Connector.DataCommunicator.OnCameraConfig += OnCameraConfig;
-	}
+	}*/
 	void OnCameraConfig(string cameraProfile)
 	{
 		_cameraProfile = cameraProfile;
 
 		//Debug.Log (cameraProfile);
+	}
+
+	void OnRobotConnected(RobotConnector.TargetPorts ports)
+	{
+		SetRemoteHost (ports.RobotIP, ports);
 	}
 	public void SetRemoteHost(string IP,RobotConnector.TargetPorts ports)
 	{
@@ -197,7 +206,7 @@ public class TelubeeOVRCamera : MonoBehaviour {
 
 		{
 			//request camera settings
-			_Connection.Connector.SendData("CameraParameters","",false);
+			RobotConnector.Connector.SendData("CameraParameters","",false);
 		}
 	}
 }

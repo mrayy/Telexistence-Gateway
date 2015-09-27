@@ -6,6 +6,14 @@ public class LeapMotionRenderer : MonoBehaviour {
 	public Material HandsMaterial;
 
 	LeapImageRetriever[] _retrivals=new LeapImageRetriever[2];
+
+	public LeapImageRetriever[] LeapRetrival
+	{
+		get
+		{
+			return _retrivals;
+		}
+	}
 	// Use this for initialization
 	void Start () {
 		OVRCameraRig OculusCamera = gameObject.GetComponent<OVRCameraRig>();
