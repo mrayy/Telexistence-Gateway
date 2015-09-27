@@ -10,6 +10,8 @@ public class RobotWorkingSpacePlotter : MonoBehaviour {
 	public IRobotJoint EndEffector;
 	public int SamplesPerJoints=50;
 
+	public KeyCode RecalculateKey;
+
 	List<IRobotJoint> _traverseJointList=new List<IRobotJoint>();
 
 	public Color Color;
@@ -24,10 +26,15 @@ public class RobotWorkingSpacePlotter : MonoBehaviour {
 	
 	}
 
-	int _CalculateJoint(int jointID, int index,int jointNumber)
+	int _CalculateJoint(int jointID, int index,int jointNumber,int vCount)
 	{
 		if (jointID < 0)
 			return index;//something wrong..
+
+		//int vCount = SamplesPerJoints - (jointNumber-1) * 2;
+		if (vCount < 2)
+			vCount = 2;
+
 		IRobotJoint joint = _traverseJointList [jointID];
 		if (EndEffector == joint) {
 			joint._UpdateJoint();
@@ -39,7 +46,7 @@ public class RobotWorkingSpacePlotter : MonoBehaviour {
 
 			if (joint.isFixed) {
 				joint._UpdateJoint();
-				index=_CalculateJoint (jointID-1,  index,jointNumber+1);
+				index=_CalculateJoint (jointID-1,  index,jointNumber+1,vCount);
 				//	foreach (var i in joints) {
 			//		if (i.ParentJont == joint) {
 				//		index=_CalculateJoint (i,  index,jointNumber+1);
@@ -47,11 +54,11 @@ public class RobotWorkingSpacePlotter : MonoBehaviour {
 			//	}
 			} else
 			{
-				int samples=SamplesPerJoints;//(int)((float)SamplesPerJoints/(float)(jointNumber+1));
+				int samples=vCount;//SamplesPerJoints;//(int)((float)SamplesPerJoints/(float)(jointNumber+1));
 				float step = (joint.MaxLimit - joint.MinLimit) / (float)(samples-1);
 				for (int i=0; i<samples; ++i) {
 					joint.SetValue(joint.MinLimit+ i*step);
-					index=_CalculateJoint (jointID-1,  index,jointNumber+1);
+					index=_CalculateJoint (jointID-1,  index,jointNumber+1,vCount-2);
 				//	foreach (var j in joints) {
 				//		if (j.ParentJont == joint) {
 				//			index=_CalculateJoint (j,  index,jointNumber+1);
@@ -76,14 +83,21 @@ public class RobotWorkingSpacePlotter : MonoBehaviour {
 		int vertCount = 1;
 		IRobotJoint jp = EndEffector.ParentJont;
 		_traverseJointList.Add(EndEffector);
+		List<float> originalVals = new List<float> ();;
+
+		int vCount = SamplesPerJoints;
 		while(jp!=null)
 		{
 			if(!jp.isFixed && jp!=EndEffector)
 			{
 				++totalCount;
-				vertCount=vertCount*SamplesPerJoints;///totalCount;
+				vertCount=vertCount*vCount;
+				vCount-=2;
+				if(vCount<2)
+					vCount=2;
 			}
 			_traverseJointList.Add(jp);
+			originalVals.Add(jp.Value);
 			if(jp==Joints.Root)
 				break;
 			jp=jp.ParentJont;
@@ -102,7 +116,18 @@ public class RobotWorkingSpacePlotter : MonoBehaviour {
 			indecies[i]=i;
 		}
 		
-		_CalculateJoint (_traverseJointList.Count-1, 0,1);
+		_CalculateJoint (_traverseJointList.Count-1, 0,1,SamplesPerJoints);
+
+		
+		 jp = EndEffector.ParentJont;
+		int index = 0;
+		while(jp!=null)
+		{
+			jp.Value=originalVals[index++];
+			if(jp==Joints.Root)
+				break;
+			jp=jp.ParentJont;
+		}
 
 		mesh.vertices = points;
 		mesh.colors = colors;
@@ -111,6 +136,12 @@ public class RobotWorkingSpacePlotter : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+		if (Input.GetKeyDown (RecalculateKey)) {
+			Calculate=true;
+			_isCalculated=false;
+		}
+
 		if (Calculate && !_isCalculated) {
 			_CalculateWorkingSpace();
 			_isCalculated=true;

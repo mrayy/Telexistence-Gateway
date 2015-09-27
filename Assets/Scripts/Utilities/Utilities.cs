@@ -6,12 +6,13 @@ using System.IO;
 using System.Text;
 
  internal static class Utilities  {
+	public static float AxisSize=0.1f;
 
 	public static void DrawAxis(Matrix4x4 frame)
 	{
-		Vector3 X = frame.GetColumn (0);
-		Vector3 Y = frame.GetColumn (1);
-		Vector3 Z = frame.GetColumn (2);
+		Vector3 X = frame.GetColumn (0)*AxisSize;
+		Vector3 Y = frame.GetColumn (1)*AxisSize;
+		Vector3 Z = frame.GetColumn (2)*AxisSize;
 		Vector3 pos = frame.GetColumn (3);
 		Debug.DrawLine (pos,pos+X,Color.red);
 		Debug.DrawLine (pos,pos+Y,Color.green);
