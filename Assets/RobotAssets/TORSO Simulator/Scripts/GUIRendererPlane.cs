@@ -6,8 +6,9 @@ public class GUIRendererPlane : MonoBehaviour {
 	public Camera TargetCamera;
 	public Material TargetMaterial;
 	public Transform OculusCenter;
+	public KeyCode EnableCode;
 	RenderTexture _RT;
-
+	GameObject _renderPlane;
 	// Use this for initialization
 	void Start () {
 
@@ -23,6 +24,7 @@ public class GUIRendererPlane : MonoBehaviour {
 		TargetCamera.backgroundColor = new Color (0, 0, 0, 0);
 
 		GameObject renderPlane = new GameObject ("UIRenderer");
+		_renderPlane = renderPlane;
 		renderPlane.AddComponent<MeshRenderer> ();
 		MeshFilter f = renderPlane.AddComponent<MeshFilter> ();
 		
@@ -69,5 +71,8 @@ public class GUIRendererPlane : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	//	_Resize ((int)TargetCamera.pixelWidth,(int)TargetCamera.pixelHeight);
+		if (Input.GetKeyDown (EnableCode)) {
+			_renderPlane.GetComponent<MeshRenderer>().enabled=!_renderPlane.GetComponent<MeshRenderer>().enabled;
+		}
 	}
 }
