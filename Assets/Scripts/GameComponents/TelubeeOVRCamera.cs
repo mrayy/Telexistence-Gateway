@@ -6,7 +6,7 @@ using System.IO;
 
 public class TelubeeOVRCamera : MonoBehaviour {
 
-	OVRCameraRig OculusCamera;
+	public OVRCameraRig OculusCamera;
 	public Material TargetMaterial;
 	public int TargetFrameRate=80;
     public enum CameraSourceType
@@ -20,6 +20,7 @@ public class TelubeeOVRCamera : MonoBehaviour {
 	public RobotConnectionComponent RobotConnector;
 
 	public TELUBeeConfiguration Configuration;
+	public bool AudioSupport=false;
 
 //	RobotConnectionComponent _Connection;
 
@@ -43,12 +44,19 @@ public class TelubeeOVRCamera : MonoBehaviour {
 		}
 	}
 
+	public TelubeeCameraRenderer[] CamRenderer {
+		get {
+			return _camRenderer;
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
 
 		Application.targetFrameRate = TargetFrameRate;
+		if(OculusCamera==null)	//Try to find OVRCameraRig component
+			OculusCamera = GameObject.FindObjectOfType<OVRCameraRig> ();
 
-        OculusCamera = gameObject.GetComponent<OVRCameraRig>();
 
 		if(TargetMaterial!=null)
             Init();
@@ -66,7 +74,7 @@ public class TelubeeOVRCamera : MonoBehaviour {
             LocalWebcameraSource c;
 			_cameraSource = (c=new LocalWebcameraSource());
             c.LeftInputCamera = 0;
-            c.RightInputCamera = 1;
+            c.RightInputCamera = 2;
             c.Init();
 		}else
 		{
@@ -77,7 +85,8 @@ public class TelubeeOVRCamera : MonoBehaviour {
 			c.Init();
 		}
 
-		_audioPlayer = new GstMultipleNetworkAudioPlayer ();
+		if(AudioSupport)
+			_audioPlayer = new GstMultipleNetworkAudioPlayer ();
 
 		EyeName[] eyes = new EyeName[]{EyeName.RightEye,EyeName.LeftEye};
         if (OculusCamera != null)
@@ -92,7 +101,7 @@ public class TelubeeOVRCamera : MonoBehaviour {
 
 			//	CreateMesh ((EyeName)i);
                 TelubeeCameraRenderer r = cams[i].gameObject.AddComponent<TelubeeCameraRenderer>();
-                r.Mat = TargetMaterial;
+				r.Mat = Object.Instantiate(TargetMaterial);
 				r.DisplayCamera=cams[i];
 				r.Src = this;
 				r.CamSource = _cameraSource;
@@ -120,20 +129,6 @@ public class TelubeeOVRCamera : MonoBehaviour {
 	void Update () {
 		GStreamerCore.Time = Time.time;
 
-		//if(_configurationDirty)
-		{
-			//_configurationDirty=false;
-			if(Configuration!=null && TargetMaterial!=null)
-			{
-//				Debug.Log("Configuration Updated");
-				TargetMaterial.SetVector("FocalLength",Configuration.CamSettings.FocalLength);
-				TargetMaterial.SetVector("LensCenter",Configuration.CamSettings.LensCenter);
-
-			//	Vector4 WrapParams=new Vector4(Configuration.CamSettings.KPCoeff.x,Configuration.CamSettings.KPCoeff.y,
-			//	                               Configuration.CamSettings.KPCoeff.z,Configuration.CamSettings.KPCoeff.w);
-				TargetMaterial.SetVector("WrapParams",Configuration.CamSettings.KPCoeff);
-			}
-		}
 
 		if (_cameraProfile != "") {
 			
@@ -191,9 +186,12 @@ public class TelubeeOVRCamera : MonoBehaviour {
 			c.port = ports.VideoPort;
 			c.Init ();
 
-			_audioPlayer.SetIP(IP,ports.AudioPort,false);
-			_audioPlayer.CreateStream();
-			_audioPlayer.Play();
+			if(_audioPlayer!=null)
+			{
+				_audioPlayer.SetIP(IP,ports.AudioPort,false);
+				_audioPlayer.CreateStream();
+				_audioPlayer.Play();
+			}
 
 			for(int i=0;i<2;++i)
 				_camRenderer[i].CamSource=_cameraSource;

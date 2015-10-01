@@ -85,8 +85,6 @@ public class GstUnityImageGrabber {
 		if (m_Texture == null) {
 			return;
 		}
-		m_Pixels = m_Texture.GetPixels32 (0);
-		m_PixelsHandle = GCHandle.Alloc(m_Pixels, GCHandleType.Pinned);
 		switch (format) {
 		case TextureFormat.ARGB32:
 		case TextureFormat.RGBA32:
@@ -109,6 +107,8 @@ public class GstUnityImageGrabber {
 	{
 		if (m_Texture == null)
 			return;
+		m_Pixels = m_Texture.GetPixels32 (0);
+		m_PixelsHandle = GCHandle.Alloc(m_Pixels, GCHandleType.Pinned);
 		mray_gst_UnityImageGrabberSetData (m_Instance, m_PixelsHandle.AddrOfPinnedObject (), m_Texture.width, m_Texture.height, (int)m_format);
 	}
 }

@@ -82,10 +82,14 @@ public class RobotConnectionComponent : MonoBehaviour {
 		_connector.DataCommunicator.OnRobotStatus += OnRobotStatus;
 		_connector.DataCommunicator.OnJointValues += OnJointValues;
 
-		_connector.StartDataCommunicator (Settings.Instance.TargetPorts.CommPort);
+		_connector.StartDataCommunicator ();
+		
+		if(RobotIndex>=0)
+			_RobotIP=AppManager.Instance.RobotManager.GetRobotInfo(RobotIndex);
+
 
 		//Send Detect Message to scan network for the available robots
-		_connector.RobotCommunicator.SetData ("detect", Settings.Instance.TargetPorts.CommPort.ToString(), false);
+		_connector.RobotCommunicator.SetData ("detect", _connector.DataCommunicator.Port.ToString(), false);
 		_connector.RobotCommunicator.BroadcastMessage (Settings.Instance.TargetPorts.CommPort);
 
 		if (Debugger != null) {
@@ -118,7 +122,8 @@ public class RobotConnectionComponent : MonoBehaviour {
 	void OnRobotInfoDetected(RobotInfo ifo)
 	{
 		Debug.Log ("Robot detected: " + ifo.Name);
-		_RobotIP = ifo;
+		if(_RobotIP==null)
+			_RobotIP = ifo;
 	}
 	void OnDestroy()
 	{
@@ -129,8 +134,6 @@ public class RobotConnectionComponent : MonoBehaviour {
 	void Connect()
 	{
 		RobotInfo ifo=_RobotIP;
-		if(ifo==null)
-			ifo=AppManager.Instance.RobotManager.GetRobotInfo(RobotIndex);
 		ConnectRobot(ifo);
 	}
 	// Update is called once per frame

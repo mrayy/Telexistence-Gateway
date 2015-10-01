@@ -3,8 +3,8 @@ using System.Collections;
 
 public class LocalWebcameraSource : ICameraSource {
 
-    public int LeftInputCamera;
-    public int RightInputCamera;
+    public int LeftInputCamera=1;
+    public int RightInputCamera=2;
 
 	public int ResolutionX=640;
 	public int ResolutionY=480;

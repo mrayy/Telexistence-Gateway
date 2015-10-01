@@ -969,3 +969,2699 @@ Info:Connecting to Robot:Telexistence Robot
 Info:Connecting to Robot:Telexistence Robot
 Info:Disconnecting Robot:Telexistence Robot
 Info:Connecting to Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Warning:RemoteRobotCommunicator::Update() - The object was used after being disposed.
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Start Updating Robot:Telexistence Robot
+Info:End Updating Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Telexistence Robot
+Info:Disconnecting Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Telexistence Robot
+Info:Connecting to Robot:Local
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Local
+Info:Connecting to Robot:Torso2
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Info:Connecting to Robot:Local
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Local
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Local
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Local
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Local
+Info:Connecting to Robot:Torso2
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Warning:RemoteRobotCommunicator::Update() - An operation was attempted on something that is not a socket.
+
+Info:Connecting to Robot:Local
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Connecting to Robot:Torso2

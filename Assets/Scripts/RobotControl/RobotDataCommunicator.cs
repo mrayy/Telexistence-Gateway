@@ -63,6 +63,15 @@ public class RobotDataCommunicator {
 	UdpClient _client;
 	DataThread _thread;
 
+	int _port;
+
+	public int Port
+	{
+		get{
+			return _port;
+		}
+	}
+
 
 	public delegate void Delg_OnCameraConfig(string cameraProfile);
 	public delegate void Delg_OnRobotCalibrateDone();
@@ -91,11 +100,12 @@ public class RobotDataCommunicator {
 	{
 	}
 
-	public void Start(int port)
+	public void Start(int port=0)
 	{
 		try
 		{
 			_client = new UdpClient (port);
+			_port=(_client.Client.LocalEndPoint as IPEndPoint).Port;
 		}catch(Exception e)
 		{
 

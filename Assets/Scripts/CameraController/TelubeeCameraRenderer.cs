@@ -85,6 +85,7 @@ public class TelubeeCameraRenderer : MonoBehaviour {
 
 				
 			Mat.SetVector("TextureSize",new Vector2(_RenderedTexture.width,_RenderedTexture.height));
+			
 
 		//	float fovScaler = 1;
 			if(Src.Configuration!=null)
@@ -105,6 +106,15 @@ public class TelubeeCameraRenderer : MonoBehaviour {
 				float ratio = w2 / w1;
 				
 				fovScaler=ratio;
+
+				
+				//				Debug.Log("Configuration Updated");
+				Mat.SetVector("FocalLength",Src.Configuration.CamSettings.FocalLength);
+				Mat.SetVector("LensCenter",Src.Configuration.CamSettings.LensCenter);
+				
+				//	Vector4 WrapParams=new Vector4(Configuration.CamSettings.KPCoeff.x,Configuration.CamSettings.KPCoeff.y,
+				//	                               Configuration.CamSettings.KPCoeff.z,Configuration.CamSettings.KPCoeff.w);
+				Mat.SetVector("WrapParams",Src.Configuration.CamSettings.KPCoeff);
 			}else
 				Mat.SetVector("PixelShift",Vector2.zero);
 				

@@ -16,6 +16,7 @@ public class LeapMotionRenderer : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
+
 		OVRCameraRig OculusCamera = gameObject.GetComponent<OVRCameraRig>();
 
 		HandController _handController= gameObject.AddComponent<HandController> ();

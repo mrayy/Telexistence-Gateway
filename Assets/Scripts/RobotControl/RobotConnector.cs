@@ -93,9 +93,10 @@ public class RobotConnector:IDisposable{
 		DataCommunicator = new RobotDataCommunicator ();
 	}
 
-	public void StartDataCommunicator(int port)
+	public int StartDataCommunicator()
 	{
-		DataCommunicator.Start(port);
+		DataCommunicator.Start();
+		return DataCommunicator.Port;
 	}
 	public void StopDataCommunicator()
 	{
@@ -130,7 +131,7 @@ public class RobotConnector:IDisposable{
 		addrStr += "," + _ports.Rtcp.ToString();
 		RobotCommunicator.SetData("Connect", addrStr,true);
 		
-		addrStr =  _ports.CommPort.ToString();
+		addrStr = DataCommunicator.Port.ToString();//_ports.CommPort.ToString();
 		RobotCommunicator.SetData("CommPort", addrStr, true);
 		
 	}
