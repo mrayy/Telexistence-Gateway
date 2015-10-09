@@ -15,7 +15,7 @@ public abstract class IRobotCommunicator  {
 	
 	public abstract string GetData(string key);
 	
-	public abstract void SetData(string key, string value, bool statusData) ;
+	public abstract void SetData(string key, string value, bool statusData,bool immediate=false) ;
 	public abstract void RemoveData(string key) ;
 	public abstract void ClearData(bool statusValues);
 

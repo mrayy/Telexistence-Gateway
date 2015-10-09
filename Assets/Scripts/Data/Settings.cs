@@ -10,10 +10,10 @@ public class Settings  {
 	{
 		_robotSettings = new INIParser ();
 		_robotSettings.Open (Application.dataPath + "\\Data\\RobotSettings.ini");
-
+		/*
 		TargetPorts.VideoPort = _robotSettings.ReadValue ("Ports", "VideoPort", 7000);
 		TargetPorts.AudioPort = _robotSettings.ReadValue ("Ports", "AudioPort", 7005);
-		TargetPorts.HandsPort = _robotSettings.ReadValue ("Ports", "HandsPort", 7010);
+		TargetPorts.HandsPort = _robotSettings.ReadValue ("Ports", "HandsPort", 7010);*/
 		TargetPorts.CommPort = _robotSettings.ReadValue ("Ports", "CommPort", 6000);
 	}
 
@@ -24,6 +24,15 @@ public class Settings  {
 		}
 	}
 
+	public int GetPortValue(string name)
+	{
+		return _robotSettings.ReadValue ("Ports", name, 0);
+	}
+	/*
+	public string GetValue(string category,string name,string defaultValue)
+	{
+		return _robotSettings.ReadValue (category, name, defaultValue);
+	}*/
 
 
 

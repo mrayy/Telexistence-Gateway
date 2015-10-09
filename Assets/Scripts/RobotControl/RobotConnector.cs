@@ -19,20 +19,23 @@ public class RobotConnector:IDisposable{
 		public TargetPorts(string ip)
 		{
 			RobotIP=ip;
-			 CommPort=-1;
-			 VideoPort=-1;
-			 AudioPort=-1;
-			 HandsPort=-1;
-			 ClockPort=-1;
-			 Rtcp=false;
+			CommPort=0;/*
+			LeftEyeVideo=0;
+			RightEyeVideo=0;
+			AudioPort=0;
+			HandsPort=0;
+			ClockPort=0;
+			Rtcp=false;*/
 		}
 		public string RobotIP;
+
 		public int CommPort;
-		public int VideoPort;
+		/*public int LeftEyeVideo;
+		public int RightEyeVideo;
 		public int AudioPort;
 		public int HandsPort;
 		public int ClockPort;
-		public bool Rtcp;
+		public bool Rtcp;*/
 	}
 
 	public IRobotCommunicator RobotCommunicator;
@@ -124,15 +127,17 @@ public class RobotConnector:IDisposable{
 		RobotCommunicator.SetUserID("yamens");
 		RobotCommunicator.ConnectUser(true);
 		string addrStr = Utilities.LocalIPAddress();
-		addrStr += "," + _ports.VideoPort.ToString();
+		/*
+		addrStr += "," + _ports.LeftEyeVideo.ToString();
+		addrStr += "," + _ports.RightEyeVideo.ToString();
 		addrStr += "," + _ports.AudioPort.ToString();
 		addrStr += "," + _ports.HandsPort.ToString();
 		addrStr += "," + _ports.ClockPort.ToString();
-		addrStr += "," + _ports.Rtcp.ToString();
-		RobotCommunicator.SetData("Connect", addrStr,true);
+		addrStr += "," + _ports.Rtcp.ToString();*/
+		RobotCommunicator.SetData("Connect", addrStr,true,false);
 		
 		addrStr = DataCommunicator.Port.ToString();//_ports.CommPort.ToString();
-		RobotCommunicator.SetData("CommPort", addrStr, true);
+		RobotCommunicator.SetData("CommPort", addrStr, true,false);
 		
 	}
 	public void ConnectRobotIP(TargetPorts ports)
@@ -148,7 +153,7 @@ public class RobotConnector:IDisposable{
 			return;
 		string ipAddr=Utilities.LocalIPAddress ();
 
-		string addrStr = ipAddr+","+_ports.VideoPort;
+		string addrStr = ipAddr+","+DataCommunicator.Port.ToString();
 		RobotCommunicator.SetData ("shutdown", "", false);
 		RobotCommunicator.SetData("Disconnect", addrStr, true);
 		RobotCommunicator.Update(0);//only once
@@ -213,11 +218,11 @@ public class RobotConnector:IDisposable{
 		RobotCommunicator.SetData ("Rotation", _robotIfo.Rotation.ToString ("f6"), false);
 	}
 
-	public void SendData(string name,string value,bool statusData=false)
+	public void SendData(string name,string value,bool statusData=false,bool immediate=false)
 	{
 		if (RobotCommunicator==null)
 			return;
-		RobotCommunicator.SetData (name,value,statusData);
+		RobotCommunicator.SetData (name,value,statusData,immediate);
 	}
 
 	public void Recalibrate()

@@ -24,7 +24,8 @@ public class TELUBeeConfiguration : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		if (AppManager.Instance.CamConfigManager.GetCamera (CamSettings.Name) != null)
+			CamSettings = AppManager.Instance.CamConfigManager.GetCamera (CamSettings.Name);
 	}
 	
 	// Update is called once per frame

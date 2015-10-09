@@ -19,6 +19,9 @@ public class GstMultipleNetworkAudioPlayer:IGstPlayer  {
 	
 	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
 	extern static private void mray_gst_netAudioPlayerSetVolume(System.IntPtr p, float v);
+	
+	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
+	extern static private uint mray_gst_netAudioPlayerGetAudioPort(System.IntPtr p);
 
 	
 	public GstMultipleNetworkAudioPlayer()
@@ -26,6 +29,10 @@ public class GstMultipleNetworkAudioPlayer:IGstPlayer  {
 		m_Instance = mray_gst_createNetworkAudioPlayer();	
 	}
 	
+	public uint GetAudioPort()
+	{
+		return mray_gst_netAudioPlayerGetAudioPort (m_Instance);
+	}
 	public override int GetCaptureRate (int index)
 	{
 		return 0;

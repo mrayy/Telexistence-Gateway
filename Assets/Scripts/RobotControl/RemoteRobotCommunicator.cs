@@ -80,11 +80,10 @@ public class RemoteRobotCommunicator : IRobotCommunicator,IDisposable {
 
 	void _SendUpdate()
 	{
-		_UpdateData ();
-		Update (0);
+		_UpdateData (true);
 	}
 
-	void _UpdateData()
+	void _UpdateData(bool SendNow)
 	{
 		lock(_values)
 		{
@@ -106,6 +105,10 @@ public class RemoteRobotCommunicator : IRobotCommunicator,IDisposable {
 				}
 				_outputValues= sw.ToString();
 			}
+			if(SendNow)
+			{
+				_SendData();
+			}
 		}
 	}
 	void _CleanData(bool statusValues)
@@ -126,7 +129,7 @@ public class RemoteRobotCommunicator : IRobotCommunicator,IDisposable {
 				}
 			}
 		}
-		_UpdateData ();
+		_UpdateData (false);
 	}
 
 	public RemoteRobotCommunicator()
@@ -153,9 +156,9 @@ public class RemoteRobotCommunicator : IRobotCommunicator,IDisposable {
 	public override void BroadcastMessage(int port)
 	{
 		byte[] d;
-		_UpdateData ();
 		lock(_values)
 		{
+			_UpdateData (false);
 			d=Encoding.UTF8.GetBytes(_outputValues);
 			ClearData (false);
 		}
@@ -217,7 +220,7 @@ public class RemoteRobotCommunicator : IRobotCommunicator,IDisposable {
 	{
 		_userInfo.RobotConnected = c;
 		lock (_values) {
-			SetData ("RobotConnect", c.ToString (), true);
+			SetData ("RobotConnect", c.ToString (), true,false);
 			_SendUpdate ();
 		}
 	}
@@ -233,7 +236,7 @@ public class RemoteRobotCommunicator : IRobotCommunicator,IDisposable {
 		return v;
 	}
 	
-	public override void SetData(string key, string value, bool statusData) 
+	public override void SetData(string key, string value, bool statusData,bool immediate) 
 	{
 		DataInfo di = new DataInfo ();
 		di.statusData = statusData;
@@ -243,7 +246,7 @@ public class RemoteRobotCommunicator : IRobotCommunicator,IDisposable {
 			if(!_values.ContainsKey(key))
 				_values.Add(key,di);
 			else _values[key]=di;
-			_UpdateData();
+			_UpdateData(immediate);
 		}
 	}
 	public override void RemoveData(string key) 
@@ -251,19 +254,18 @@ public class RemoteRobotCommunicator : IRobotCommunicator,IDisposable {
 		lock(_values)
 		{
 			_values.Remove (key);
-			_UpdateData ();
+			_UpdateData (false);
 		}
 	}
 	public override void ClearData(bool statusValues)
 	{
 		_CleanData (statusValues);
 	}
-	
-	public override void Update(float dt)
+	void _SendData()
 	{
 		if (!_connected && !Broadcast)
 			return;
-
+		
 		byte[] d;
 		lock(_values)
 		{
@@ -286,6 +288,10 @@ public class RemoteRobotCommunicator : IRobotCommunicator,IDisposable {
 		{
 			LogSystem.Instance.Log("RemoteRobotCommunicator::Update() - "+e.Message,LogSystem.LogType.Warning);
 		}
+	}
+	public override void Update(float dt)
+	{
+		_SendData ();
 	}
 
 }

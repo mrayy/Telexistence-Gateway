@@ -7,6 +7,9 @@ public class LeapMotionRenderer : MonoBehaviour {
 
 	LeapImageRetriever[] _retrivals=new LeapImageRetriever[2];
 
+	GameObject _Hands;
+	public bool IsActive=true;
+
 	public LeapImageRetriever[] LeapRetrival
 	{
 		get
@@ -50,6 +53,8 @@ public class LeapMotionRenderer : MonoBehaviour {
 			LeapImageBasedMaterial lmat=HandsRenderer.AddComponent<LeapImageBasedMaterial>();
 			lmat.imageMode=LeapImageBasedMaterial.ImageMode.STEREO;
 			HandsRenderer.GetComponent<MeshRenderer>().material=HandsMaterial;
+			_Hands=HandsRenderer;
+			_Hands.GetComponent<MeshRenderer>().enabled=IsActive;
 		}
 
 
@@ -57,6 +62,22 @@ public class LeapMotionRenderer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (_Hands == null)
+			return;
+		HandController c=GameObject.FindObjectOfType<HandController> ();
+		if (c == null) {
+			_Hands.GetComponent<MeshRenderer>().enabled=false;
+			return;
+		}
+		if (c.IsConnected() == false) {
+			_Hands.GetComponent<MeshRenderer>().enabled=false;
+			return;
+		}
+		if (Input.GetButtonDown ("Hands")) {
+			IsActive=!IsActive;
+		}
+		if (_Hands.GetComponent<MeshRenderer> ().enabled != IsActive) {
+			_Hands.GetComponent<MeshRenderer> ().enabled = IsActive;
+		}
 	}
 }

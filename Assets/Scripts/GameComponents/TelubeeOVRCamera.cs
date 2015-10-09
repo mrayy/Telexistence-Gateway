@@ -4,7 +4,7 @@ using System.Collections;
 using System.Xml;
 using System.IO;
 
-public class TelubeeOVRCamera : MonoBehaviour {
+public class TelubeeOVRCamera : MonoBehaviour,IDependencyNode  {
 
 	public OVRCameraRig OculusCamera;
 	public Material TargetMaterial;
@@ -33,6 +33,9 @@ public class TelubeeOVRCamera : MonoBehaviour {
 
 	DebugCameraCaptureElement _cameraDebugElem;
 
+	uint[] _videoPorts;
+	uint _audioPort=0;
+
 	string _remoteHostIP;
 
 	string _cameraProfile="";
@@ -49,7 +52,13 @@ public class TelubeeOVRCamera : MonoBehaviour {
 			return _camRenderer;
 		}
 	}
-
+	public  void OnDependencyStart(DependencyRoot root)
+	{
+		if (root == RobotConnector) {
+			RobotConnector.OnRobotConnected += OnRobotConnected;
+			RobotConnector.Connector.DataCommunicator.OnCameraConfig += OnCameraConfig;
+		}
+	}
 	// Use this for initialization
 	void Start () {
 
@@ -61,20 +70,20 @@ public class TelubeeOVRCamera : MonoBehaviour {
 		if(TargetMaterial!=null)
             Init();
 
+		RobotConnector.AddDependencyNode (this);
 
-		RobotConnector.OnRobotConnected += OnRobotConnected;
-		RobotConnector.Connector.DataCommunicator.OnCameraConfig += OnCameraConfig;
 	}
 
 
     void Init()
     {
+		CameraType = Settings.Instance.RobotSettings.ReadValue ("Camera", "Source", CameraType.ToString ())=="Local"?CameraSourceType.Local:CameraSourceType.Remote;
         if(CameraType==CameraSourceType.Local)
         {
             LocalWebcameraSource c;
 			_cameraSource = (c=new LocalWebcameraSource());
-            c.LeftInputCamera = 0;
-            c.RightInputCamera = 2;
+			c.LeftInputCamera = Settings.Instance.RobotSettings.ReadValue ("Camera", "Left", 0);
+			c.RightInputCamera = Settings.Instance.RobotSettings.ReadValue ("Camera", "Right", 1);
             c.Init();
 		}else
 		{
@@ -183,14 +192,21 @@ public class TelubeeOVRCamera : MonoBehaviour {
 			c.StreamsCount = 2;
 			c.TargetNode = gameObject;
 			c.Host = IP;
-			c.port = ports.VideoPort;
+			c.port = Settings.Instance.GetPortValue("VideoPort");
 			c.Init ();
+			_videoPorts=new uint[2]{0,0};
+			_videoPorts[0]=c.Texture.Player.GetVideoPort(0);
+			_videoPorts[1]=c.Texture.Player.GetVideoPort(1);
+			RobotConnector.Connector.SendData("VideoPorts",_videoPorts[0].ToString()+","+_videoPorts[1].ToString(),true);
 
 			if(_audioPlayer!=null)
 			{
-				_audioPlayer.SetIP(IP,ports.AudioPort,false);
+				int port= Settings.Instance.GetPortValue("AudioPort");
+				_audioPlayer.SetIP(IP,0,false);
 				_audioPlayer.CreateStream();
 				_audioPlayer.Play();
+				_audioPort=_audioPlayer.GetAudioPort();
+				RobotConnector.Connector.SendData("AudioPort",_audioPort.ToString(),true);
 			}
 
 			for(int i=0;i<2;++i)

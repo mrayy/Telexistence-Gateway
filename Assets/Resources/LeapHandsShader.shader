@@ -1,6 +1,7 @@
-﻿Shader "LeapMotion/Passthrough/Foreground" {
+﻿Shader "TelexistenceGateway/LeapHandsShader" {
   Properties {
     _ColorSpaceGamma ("Color Space Gamma", Float) = 1.0
+    _HandsColor("Hands Color", Color) = (0.96,0.725,0.62,1.0)
   }
 
   SubShader {
@@ -20,10 +21,11 @@
     #include "LeapCG.cginc"
     #include "UnityCG.cginc"
     
-    #pragma vertex vert
+    #pragma vertex vert 
     #pragma fragment frag
     
     uniform float _ColorSpaceGamma;
+    uniform float4 _HandsColor;
 
     struct frag_in{
       float4 position : SV_POSITION;
@@ -44,7 +46,7 @@
     	if(alpha<0.15)
     		alpha=0;
     	else alpha=1;
-      	return float4(pow(colorBrightness.rrr, 1/_ColorSpaceGamma)*alpha, alpha)*float4(0.96,0.725,0.62,1);
+      	return float4(pow(colorBrightness.rrr, 1/_ColorSpaceGamma)*alpha, alpha)*_HandsColor;//float4(0.96,0.725,0.62,1);
     }
 
     ENDCG

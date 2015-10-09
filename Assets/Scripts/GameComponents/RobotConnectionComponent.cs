@@ -2,7 +2,7 @@
 using System.Collections;
 using System.IO;
 
-public class RobotConnectionComponent : MonoBehaviour {
+public class RobotConnectionComponent : DependencyRoot {
 
 	RobotConnector _connector;
 
@@ -89,8 +89,9 @@ public class RobotConnectionComponent : MonoBehaviour {
 
 
 		//Send Detect Message to scan network for the available robots
-		_connector.RobotCommunicator.SetData ("detect", _connector.DataCommunicator.Port.ToString(), false);
+		_connector.RobotCommunicator.SetData ("detect", _connector.DataCommunicator.Port.ToString(), true,false);
 		_connector.RobotCommunicator.BroadcastMessage (Settings.Instance.TargetPorts.CommPort);
+		_connector.RobotCommunicator.RemoveData ("detect");
 
 		if (Debugger != null) {
 			Debugger.AddDebugElement(new DebugRobotStatus(this));
@@ -98,7 +99,7 @@ public class RobotConnectionComponent : MonoBehaviour {
 
 		//VideoStream.SetConnectionComponent (this);
 
-
+		_OnStarted ();
 	}
 	void OnMessage(int message,BinaryReader reader)
 	{

@@ -8,6 +8,13 @@ public class MultipleNetworkCameraSource : ICameraSource {
 	public string Host = "127.0.0.1";
 	public int port=7000;
 	public int StreamsCount=1;
+
+	public GstNetworkMultipleTexture Texture
+	{
+		get{
+			return m_Texture;
+		}
+	}
 	public GstBaseTexture GetBaseTexture()
 	{
 		return m_Texture;

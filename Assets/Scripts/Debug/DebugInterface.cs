@@ -25,6 +25,7 @@ public class DebugInterface : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		_debugElements.Add (new DebugFPSElement ());
+			DebugText.enabled=false;
 	}
 	
 	// Update is called once per frame

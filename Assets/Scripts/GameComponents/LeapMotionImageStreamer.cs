@@ -9,11 +9,13 @@ public class LeapMotionImageStreamer : MonoBehaviour {
 	public LeapMotionRenderer HandRenderer;
 	public RobotConnectionComponent RobotConnector;
 	bool _isConnected;
+	int _handsPort;
 	// Use this for initialization
 	void Start () {		
 		RobotConnector.OnRobotConnected += OnRobotConnected;
 		RobotConnector.OnRobotDisconnected += OnRobotDisconnected;
 		_isConnected = false;
+		_handsPort = 7000;
 	}
 	
 	// Update is called once per frame
@@ -34,13 +36,15 @@ public class LeapMotionImageStreamer : MonoBehaviour {
 		_imageGrabber.SetTexture2D (HandRenderer.LeapRetrival [0].MainTexture,TextureFormat.Alpha8);
 		_imageGrabber.Update();//update once
 		
-		
+		_handsPort=Settings.Instance.GetPortValue("HandsPort");
+
 		_streamer = new GstNetworkImageStreamer ();
 		_streamer.SetBitRate (500);
 		_streamer.SetResolution (640, 240, 30);
 		_streamer.SetGrabber (_imageGrabber);
-		_streamer.SetIP (ports.RobotIP, ports.HandsPort, false);
-
+		_streamer.SetIP (ports.RobotIP, _handsPort, false);
+		RobotConnector.Connector.SendData("HandPorts",_handsPort.ToString(),false);
+		
 		_streamer.CreateStream ();
 		_streamer.Stream ();
 		_isConnected = true;

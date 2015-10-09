@@ -29,6 +29,9 @@ public class GstMultipleNetworkPlayer:IGstPlayer  {
 	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
 	extern static private int mray_gst_multiNetPlayerFrameCount(System.IntPtr p,int index);
 	
+	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
+	extern static private uint mray_gst_multiNetPlayerGetVideoPort(System.IntPtr p,int index);
+	
 	public Vector2 FrameSize
 	{
 		get
@@ -42,6 +45,11 @@ public class GstMultipleNetworkPlayer:IGstPlayer  {
 	public GstMultipleNetworkPlayer()
 	{
 		m_Instance = mray_gst_createNetworkMultiplePlayer();	
+	}
+
+	public uint GetVideoPort(int index)
+	{
+		return mray_gst_multiNetPlayerGetVideoPort (m_Instance, index);
 	}
 	
 	public override int GetCaptureRate (int index)
