@@ -65,6 +65,7 @@ public class TelubeeCameraRenderer : MonoBehaviour {
 		{
 			Vector3 res=rotMat*(2*uv[v]-Vector2.one);
 			uv[v]=(new Vector2(res.x,res.y)+Vector2.one)*0.5f;//Vector2.one-uv[v];
+			uv[v].x=1-uv[v].x;
 		}
 		mf.mesh.uv = uv;
 		mf.mesh.triangles = new int[]

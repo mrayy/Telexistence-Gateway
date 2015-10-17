@@ -9,6 +9,9 @@ public class TelubeeOVRCamera : MonoBehaviour {
 	public OVRCameraRig OculusCamera;
 	public Material TargetMaterial;
 	public int TargetFrameRate=80;
+
+	public int leftCam=0;
+	public int rightCam=1;
     public enum CameraSourceType
     {
         Local,
@@ -73,8 +76,8 @@ public class TelubeeOVRCamera : MonoBehaviour {
         {
             LocalWebcameraSource c;
 			_cameraSource = (c=new LocalWebcameraSource());
-            c.LeftInputCamera = 0;
-            c.RightInputCamera = 2;
+            c.LeftInputCamera = leftCam;
+            c.RightInputCamera = rightCam;
             c.Init();
 		}else
 		{

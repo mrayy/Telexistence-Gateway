@@ -3665,3 +3665,24 @@ Info:Connecting to Robot:Torso2
 Info:Connecting to Robot:Torso2
 Info:Connecting to Robot:Torso2
 Info:Connecting to Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Connecting to Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Disconnecting Robot:Torso2
