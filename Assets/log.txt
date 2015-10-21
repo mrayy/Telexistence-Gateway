@@ -3686,3 +3686,8 @@ Info:Disconnecting Robot:Torso2
 Info:Disconnecting Robot:Torso2
 Info:Disconnecting Robot:Torso2
 Info:Disconnecting Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Disconnecting Robot:Torso2
+Info:Start Updating Robot:Torso2
+Info:End Updating Robot:Torso2

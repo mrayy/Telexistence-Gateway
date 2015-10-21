@@ -5,6 +5,7 @@ public class DoorManager : MonoBehaviour {
 
 	private GameObject myGate;
 	private GameObject gateFrame;
+	public float doorDistanceX = 1.6f;
 
 	// Use this for initialization
 	void Start () {
@@ -34,10 +35,9 @@ public class DoorManager : MonoBehaviour {
 
 	void ApperDoor(){
 
-		initGate ();
 		Vector3 position = this.transform.position;
-		position.z += 1.6f;
-		position.x += 0.2f;
+		position.z += doorDistanceX;
+		position.x += -0.05f;
 		Instantiate (myGate, position, Quaternion.identity);
 	}
 
