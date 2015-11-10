@@ -33,9 +33,9 @@ public class RobotDataCommunicator {
 		EIniting,
 		EStopping,
 		EDisconnected,
+		EDisconnecting,
 		EConnected,
-		EConnecting,
-		EDisconnecting
+		EConnecting
 	};
 
 

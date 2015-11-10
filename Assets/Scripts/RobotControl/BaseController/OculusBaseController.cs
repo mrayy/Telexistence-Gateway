@@ -16,7 +16,7 @@ public class OculusBaseController:IRobotBaseControl {
 		}
 
 		
-		Vector3 p = OVRManager.display.GetEyePose (OVREye.Left).position;
+		Vector3 p = OVRManager.display.GetHeadPose (0).position;
 		Vector3 diff = p - m_headPosCalib;
 		
 		float x = diff.z;
@@ -28,10 +28,16 @@ public class OculusBaseController:IRobotBaseControl {
 		x = Mathf.Sign(x)*Mathf.Pow(Mathf.Min(1.0f, Mathf.Max(0, Mathf.Abs(x) - minOffset) / (maxOffset-minOffset)),2);
 		y = Mathf.Sign(y)*Mathf.Pow(Mathf.Min(1.0f, Mathf.Max(0, Mathf.Abs(y) - minOffset) / (maxOffset - minOffset)),2);
 		
-		m_currentSpeed += new Vector2(-x, y)*Time.deltaTime * 2;
+		m_currentSpeed += new Vector2(x, -y)*Time.deltaTime * 2;
 		m_currentSpeed -= m_currentSpeed*Time.deltaTime*1;
 		m_currentSpeed.x = Mathf.Clamp(m_currentSpeed.x, -1, 1);
 		m_currentSpeed.y = Mathf.Clamp(m_currentSpeed.y, -1, 1);
+
+		Vector2 speed = m_currentSpeed;
+		if (Mathf.Abs (speed.x) < 0.1)
+			speed.x = 0;
+		if (Mathf.Abs (speed.y) < 0.1)
+			speed.y = 0;
 		return m_currentSpeed;
 	}
 	public float GetRotation()
@@ -39,10 +45,12 @@ public class OculusBaseController:IRobotBaseControl {
 		if (Ovr.Hmd.Detect () == 0) 
 			return 0;
 		
-		float y = OVRManager.display.GetEyePose (OVREye.Left).orientation.eulerAngles.y;
+		float y = OVRManager.display.GetHeadPose (0).orientation.eulerAngles.y;
+
+		if(y>180)
+			y = y-360;
 		
-		
-		float minAngle = 15;
+		float minAngle = 20;
 		float maxAngle = 60;
 		
 		y = Mathf.Sign(y)*Mathf.Pow(Mathf.Min(1.0f, Mathf.Max(0, Mathf.Abs(y) - minAngle) / (maxAngle - minAngle)),2);
@@ -50,15 +58,15 @@ public class OculusBaseController:IRobotBaseControl {
 		m_currentRotation += Mathf.Clamp(2 * y, -1, 1)*Time.deltaTime* 2;
 		m_currentRotation -= m_currentRotation*Time.deltaTime*1.5f;
 		m_currentRotation = Mathf.Clamp(m_currentRotation, -1, 1);
-		
-		
-		float r = m_currentRotation;
-		return -r;
+
+		return -m_currentRotation;
 	}
 	public void Recalibrate()
 	{
 		if (Ovr.Hmd.Detect () >0) {
 			m_headPosCalib = OVRManager.display.GetEyePose (OVREye.Left).position;
 		}
+		m_currentSpeed = Vector2.zero;
+		m_currentRotation = 0;
 	}
 }

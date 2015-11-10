@@ -28,6 +28,11 @@ public class Settings  {
 	{
 		return _robotSettings.ReadValue ("Ports", name, 0);
 	}
+
+	public string GetValue(string cat,string name,string def)
+	{
+		return _robotSettings.ReadValue (cat, name,def);
+	}
 	/*
 	public string GetValue(string category,string name,string defaultValue)
 	{

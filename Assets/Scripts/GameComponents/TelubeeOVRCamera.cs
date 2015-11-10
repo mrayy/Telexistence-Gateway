@@ -28,6 +28,7 @@ public class TelubeeOVRCamera : MonoBehaviour,IDependencyNode  {
 
     ICameraSource _cameraSource;
 	GstMultipleNetworkAudioPlayer _audioPlayer;
+	GstNetworkAudioStreamer _audioStreamer;
 
 	TelubeeCameraRenderer[] _camRenderer=new TelubeeCameraRenderer[2];
 
@@ -39,6 +40,14 @@ public class TelubeeOVRCamera : MonoBehaviour,IDependencyNode  {
 	string _remoteHostIP;
 
 	string _cameraProfile="";
+	int m_grabbedFrames=0;
+
+	public int GrabbedFrames
+	{
+		get{
+			return m_grabbedFrames;
+		}
+	}
 
 	public string RemoteHostIP
 	{
@@ -56,6 +65,7 @@ public class TelubeeOVRCamera : MonoBehaviour,IDependencyNode  {
 	{
 		if (root == RobotConnector) {
 			RobotConnector.OnRobotConnected += OnRobotConnected;
+			RobotConnector.OnRobotDisconnected+=OnRobotDisconnected;
 			RobotConnector.Connector.DataCommunicator.OnCameraConfig += OnCameraConfig;
 		}
 	}
@@ -72,8 +82,37 @@ public class TelubeeOVRCamera : MonoBehaviour,IDependencyNode  {
 
 		RobotConnector.AddDependencyNode (this);
 
+		GStreamerCore.Ref ();
 	}
 
+	void OnDestroy()
+	{
+		//GStreamerCore.Unref ();
+	}
+
+	public void ApplyMaterial(Material m)
+	{
+		TargetMaterial = m;
+		if(_camRenderer [0]!=null)
+			_camRenderer [0].ApplyMaterial (m);
+		
+		if(_camRenderer [1]!=null)
+			_camRenderer [1].ApplyMaterial (m);
+	}
+
+	void OnFrameGrabbed(Texture2D texture,int index)
+	{
+	//	Debug.Log ("Frame Grabbed: "+index);
+		m_grabbedFrames++;
+		if (m_grabbedFrames > 10) {
+			_camRenderer[0].Enable();
+			_camRenderer[1].Enable();
+		}
+
+		if (RobotConnector != null) {
+			RobotConnector.OnCameraFPS(_cameraSource.GetBaseTexture().GetCaptureRate(0),_cameraSource.GetBaseTexture().GetCaptureRate(1));
+		}
+	}
 
     void Init()
     {
@@ -94,8 +133,12 @@ public class TelubeeOVRCamera : MonoBehaviour,IDependencyNode  {
 			c.Init();
 		}
 
-		if(AudioSupport)
+		if (AudioSupport) {
 			_audioPlayer = new GstMultipleNetworkAudioPlayer ();
+			_audioStreamer = gameObject.AddComponent<GstNetworkAudioStreamer> ();
+			_audioStreamer.SetChannels(1);
+			_audioStreamer.CreateStream();
+		}
 
 		EyeName[] eyes = new EyeName[]{EyeName.RightEye,EyeName.LeftEye};
         if (OculusCamera != null)
@@ -171,12 +214,17 @@ public class TelubeeOVRCamera : MonoBehaviour,IDependencyNode  {
 	{
 		SetRemoteHost (ports.RobotIP, ports);
 	}
+	void OnRobotDisconnected()
+	{
+		_camRenderer [0].Disable ();
+		_camRenderer [1].Disable ();
+
+		if (_audioStreamer != null) {
+			_audioStreamer.Stop();
+		}
+	}
 	public void SetRemoteHost(string IP,RobotConnector.TargetPorts ports)
 	{
-		if (_cameraSource != null) {
-			_cameraSource.Close();
-			_cameraSource=null;
-		}
 		_remoteHostIP = IP;
 		/*
 		MultipleNetworkCameraSource c;
@@ -185,8 +233,13 @@ public class TelubeeOVRCamera : MonoBehaviour,IDependencyNode  {
 		c.Host = IP;
 		c.port = port;
 		c.Init();*/
+		if(this.CameraType==CameraSourceType.Remote)
 		{
 			
+			if (_cameraSource != null) {
+				_cameraSource.Close();
+				_cameraSource=null;
+			}
 			MultipleNetworkCameraSource c;
 			_cameraSource = (c = new MultipleNetworkCameraSource ());
 			c.StreamsCount = 2;
@@ -194,6 +247,14 @@ public class TelubeeOVRCamera : MonoBehaviour,IDependencyNode  {
 			c.Host = IP;
 			c.port = Settings.Instance.GetPortValue("VideoPort");
 			c.Init ();
+			
+			_cameraSource.GetBaseTexture ().OnFrameGrabbed += OnFrameGrabbed;
+			m_grabbedFrames=0;
+
+			//disable the renderes until we video stream starts
+			//_camRenderer[0].Disable();
+			//_camRenderer[1].Disable();
+
 			_videoPorts=new uint[2]{0,0};
 			_videoPorts[0]=c.Texture.Player.GetVideoPort(0);
 			_videoPorts[1]=c.Texture.Player.GetVideoPort(1);
@@ -209,6 +270,11 @@ public class TelubeeOVRCamera : MonoBehaviour,IDependencyNode  {
 				RobotConnector.Connector.SendData("AudioPort",_audioPort.ToString(),true);
 			}
 
+			if(_audioStreamer!=null)
+			{
+				_audioStreamer.SetIP(IP,7010,false);//port should be dynamically assigned from remote side
+				_audioStreamer.Stream();
+			}
 			for(int i=0;i<2;++i)
 				_camRenderer[i].CamSource=_cameraSource;
 			if (Debugger) {

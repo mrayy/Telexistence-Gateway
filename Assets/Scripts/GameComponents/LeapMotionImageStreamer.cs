@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LeapMotionImageStreamer : MonoBehaviour {
+public class LeapMotionImageStreamer : MonoBehaviour,IDependencyNode {
 
 	GstNetworkImageStreamer _streamer;
 	GstUnityImageGrabber _imageGrabber;
@@ -12,10 +12,16 @@ public class LeapMotionImageStreamer : MonoBehaviour {
 	int _handsPort;
 	// Use this for initialization
 	void Start () {		
-		RobotConnector.OnRobotConnected += OnRobotConnected;
-		RobotConnector.OnRobotDisconnected += OnRobotDisconnected;
 		_isConnected = false;
-		_handsPort = 7000;
+		_handsPort = 7010;
+		RobotConnector.AddDependencyNode (this);
+	}
+	public  void OnDependencyStart(DependencyRoot root)
+	{
+		if (root == RobotConnector) {
+			RobotConnector.OnRobotConnected += OnRobotConnected;
+			RobotConnector.OnRobotDisconnected += OnRobotDisconnected;
+		}
 	}
 	
 	// Update is called once per frame
@@ -32,14 +38,18 @@ public class LeapMotionImageStreamer : MonoBehaviour {
 	}
 	void OnRobotConnected(RobotConnector.TargetPorts ports)
 	{
+		HandController c=GameObject.FindObjectOfType<HandController> ();
+		if (c == null || !c.IsConnected ()) {
+			return;
+		}
 		_imageGrabber = new GstUnityImageGrabber ();
-		_imageGrabber.SetTexture2D (HandRenderer.LeapRetrival [0].MainTexture,TextureFormat.Alpha8);
+		_imageGrabber.SetTexture2D (HandRenderer.LeapRetrival [0].MainTextureData,HandRenderer.LeapRetrival [0].Width,HandRenderer.LeapRetrival [0].Height,TextureFormat.Alpha8);
 		_imageGrabber.Update();//update once
 		
 		_handsPort=Settings.Instance.GetPortValue("HandsPort");
 
 		_streamer = new GstNetworkImageStreamer ();
-		_streamer.SetBitRate (500);
+		_streamer.SetBitRate (300);
 		_streamer.SetResolution (640, 240, 30);
 		_streamer.SetGrabber (_imageGrabber);
 		_streamer.SetIP (ports.RobotIP, _handsPort, false);

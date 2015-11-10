@@ -1,64 +1,55 @@
-﻿Shader "Custom/WebCamShader" {
+﻿Shader "Telexistence/Demo/WebCamShader" {
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "white" {}
 	}
 	SubShader {
 		Tags { "RenderType"="Opaque" }
-		LOD 200
-		
-		Lighting Off
-		ZWrite Off
-		Cull Off
+		Pass{
+			LOD 200
+			
+			Lighting Off
+			ZWrite Off
+			Cull Off
 			Fog { Mode off }
 		
-		CGPROGRAM
-		#pragma surface surf Lambert
-
-
-		sampler2D _MainTex;
-		
-
-		struct Input {
-			float2 uv_MainTex;
-		};
-		
-		float2 LensCenter=float2(0.5,0.5);
-		float2 FocalLength=float2(1,1);
-		float4 WrapParams=float4(1,1,1,1);
-		
-		float2 PixelShift=float2(0,0);
-		float2 TextureSize=float2(1,1);
-		
-		float2 _CorrectDistortion(float2 uv)
-		{ 
-			float2 xy=(uv-LensCenter)/FocalLength;
-
-			float r=sqrt(dot(xy,xy));
-			float r2=r*r;
-			float r4=r2*r2;
-			float coeff=(WrapParams.x*r2+WrapParams.y*r4); //radial factor
-
-			float dx=WrapParams.z*2.0*xy.x*xy.y    + WrapParams.w*(r2+2.0*xy.x*xy.x);
-			float dy=WrapParams.z*(r2+2.0*xy.y*xy.y) + WrapParams.w*2.0*xy.x*xy.y;
-
-			xy=((xy+xy*coeff.xx+float2(dx,dy))*FocalLength+LensCenter);
-		    return xy;
-		    
-		}
-		void surf (Input IN, inout SurfaceOutput o) {
-			IN.uv_MainTex+=PixelShift/TextureSize;
-			float4 c;
-			float2 tc=_CorrectDistortion(IN.uv_MainTex);
-			if (any(clamp(tc, float2(0.0,0.0), float2(1.0, 1.0)) - tc))    
-				c=0;
-			else			
-				c = tex2D (_MainTex, tc);
+			CGPROGRAM
 			
-			o.Albedo = c.rgb;
-			o.Alpha = c.a;
-			o.Emission=c.rgb;
+			#pragma vertex vert
+			#pragma fragment frag
+
+			#include "UnityCG.cginc"
+			#include "TelexistenceCG.cginc"
+
+			sampler2D _MainTex;
+
+
+			float2 PixelShift=float2(0,0);
+			float2 TextureSize=float2(1,1);
+
+			struct v2f {
+			    float4 pos : SV_POSITION;
+			    float2 uv : TEXCOORD0;
+			};
+			v2f vert(appdata_base  v) {
+			    v2f o;
+			    o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+			    o.uv = v.texcoord;
+			    return o;
+			}
+			half4 frag(v2f IN) : SV_Target {
+				IN.uv+=PixelShift/TextureSize;
+				float4 c;
+				float2 tc=_CorrectDistortion(IN.uv);
+				if (any(clamp(tc, float2(0.0,0.0), float2(1.0, 1.0)) - tc))    
+					c=0;
+				else			
+					c = tex2D (_MainTex, tc);
+				c.a=1;
+				return c;
+			}
+
+	        ENDCG
 		}
-		ENDCG
 	} 
-	FallBack "Diffuse"
 }
+ 

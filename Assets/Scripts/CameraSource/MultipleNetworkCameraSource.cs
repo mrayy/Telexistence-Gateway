@@ -32,8 +32,12 @@ public class MultipleNetworkCameraSource : ICameraSource {
 	{
 		if (m_Texture != null) {
 			m_Texture.Close();
+			m_Texture.Destroy ();
+			GameObject.Destroy(m_Texture);
+			m_Texture=null;
 		}
 	}
+
 	public Texture GetEyeTexture(EyeName e)
 	{
 		if (m_Texture != null && m_Texture.PlayerTexture!=null) {

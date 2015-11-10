@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Runtime.InteropServices;
+using System;
 
 public class GstUnityImageGrabber {
 	
@@ -61,12 +62,16 @@ public class GstUnityImageGrabber {
 	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
 	extern static private void mray_gst_UnityImageGrabberSetData(System.IntPtr p, System.IntPtr _TextureNativePtr, int _UnityTextureWidth, int _UnityTextureHeight,int Format);
 
-	Texture2D m_Texture;
-	protected Color32[] m_Pixels;
-	protected GCHandle m_PixelsHandle;
+	byte[] m_Texture;
+	int m_width,m_height;
+	//protected Color32[] m_Pixels;
+	//protected GCHandle m_PixelsHandle;
 	EPixelFormat m_format;
 
 	protected System.IntPtr m_Instance;
+
+	IntPtr m_lastArrayPtr=IntPtr.Zero;
+	int m_lastArrayLength;
 
 	public System.IntPtr Instance
 	{
@@ -79,11 +84,20 @@ public class GstUnityImageGrabber {
 	{
 		m_Instance = mray_gst_createUnityImageGrabber();	
 	}
-	public void SetTexture2D(Texture2D texture,TextureFormat format)
+	public void SetTexture2D(byte[] texture,int width,int height,TextureFormat format)
 	{
 		m_Texture = texture;
+		m_width = width;
+		m_height = height;
 		if (m_Texture == null) {
 			return;
+		}
+
+		if (m_Texture.Length != m_lastArrayLength) {
+			if(m_lastArrayPtr!=IntPtr.Zero)
+				Marshal.FreeHGlobal(m_lastArrayPtr);
+			
+			m_lastArrayPtr = Marshal.AllocHGlobal(m_Texture.Length);
 		}
 		switch (format) {
 		case TextureFormat.ARGB32:
@@ -98,17 +112,16 @@ public class GstUnityImageGrabber {
 			break;
 		}
 	}
-	public void SetTexture2D(Texture2D texture)
-	{
-		SetTexture2D (m_Texture, m_Texture.format);
-	}
 
 	public void Update()
 	{
 		if (m_Texture == null)
 			return;
-		m_Pixels = m_Texture.GetPixels32 (0);
-		m_PixelsHandle = GCHandle.Alloc(m_Pixels, GCHandleType.Pinned);
-		mray_gst_UnityImageGrabberSetData (m_Instance, m_PixelsHandle.AddrOfPinnedObject (), m_Texture.width, m_Texture.height, (int)m_format);
+	//	m_Pixels = m_Texture.GetPixels32 (0);
+	//	m_PixelsHandle = GCHandle.Alloc(m_Pixels, GCHandleType.Pinned);
+
+		Marshal.Copy(m_Texture, 0, m_lastArrayPtr, m_Texture.Length);
+
+		mray_gst_UnityImageGrabberSetData (m_Instance, m_lastArrayPtr, m_width,m_height, (int)m_format);
 	}
 }

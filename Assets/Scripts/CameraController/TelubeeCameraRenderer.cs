@@ -23,6 +23,33 @@ public class TelubeeCameraRenderer : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	public void ApplyMaterial(Material m)
+	{
+		Mat = m;
+		MeshRenderer mr = _RenderPlane.GetComponent<MeshRenderer> ();
+		if (mr != null) {
+			mr.material=m;
+		}
+
+	}
+
+	public void Enable()
+	{
+		MeshRenderer mr = _RenderPlane.GetComponent<MeshRenderer> ();
+		if (mr != null) {
+			mr.enabled=true;
+		}
+		this.enabled = true;
+	}
+	public void Disable()
+	{
+		MeshRenderer mr = _RenderPlane.GetComponent<MeshRenderer> ();
+		if (mr != null) {
+			mr.enabled=false;
+		}
+		this.enabled = false;
+	}
 	
 	public void CreateMesh(EyeName eye )
 	{
@@ -65,6 +92,10 @@ public class TelubeeCameraRenderer : MonoBehaviour {
 		{
 			Vector3 res=rotMat*(2*uv[v]-Vector2.one);
 			uv[v]=(new Vector2(res.x,res.y)+Vector2.one)*0.5f;//Vector2.one-uv[v];
+			if(Src.Configuration.CamSettings.FlipXAxis)
+			{
+				uv[v].x=1-uv[v].x;
+			}
 		}
 		mf.mesh.uv = uv;
 		mf.mesh.triangles = new int[]

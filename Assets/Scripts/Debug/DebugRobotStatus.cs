@@ -21,7 +21,9 @@ public class DebugRobotStatus : DebugInterface.IDebugElement {
 		}
 		str+="Head Position= " + _connector.HeadPosition.ToString()+"\n";
 		str+= "Head Rotation= " + _connector.HeadRotation.eulerAngles.ToString()+"\n";
-
+		
+		str+="Rotation Speed= " + _connector.Rotation.ToString()+"\n";
+		str+= "Motion Speed= " + _connector.Speed.ToString()+"\n";
 		float[] jv = Robot.RobotJointValues;
 		if (jv != null) {
 			str+="Robot Joint Values: \n";

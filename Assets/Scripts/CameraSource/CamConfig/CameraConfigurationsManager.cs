@@ -42,7 +42,7 @@ public class CameraConfigurationsManager  {
 				r.LoadXML(reader);
 				_cams[r.Name]=r;
 
-				Debug.Log("Camera Configuration Loaded: "+r.Name);
+//				Debug.Log("Camera Configuration Loaded: "+r.Name);
 			}
 		}
 		reader.Close ();

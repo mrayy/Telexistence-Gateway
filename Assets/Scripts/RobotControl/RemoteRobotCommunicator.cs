@@ -107,7 +107,7 @@ public class RemoteRobotCommunicator : IRobotCommunicator,IDisposable {
 			}
 			if(SendNow)
 			{
-				_SendData();
+				_SendData(true);
 			}
 		}
 	}
@@ -261,9 +261,9 @@ public class RemoteRobotCommunicator : IRobotCommunicator,IDisposable {
 	{
 		_CleanData (statusValues);
 	}
-	void _SendData()
+	void _SendData(bool force)
 	{
-		if (!_connected && !Broadcast)
+		if (!_connected && !Broadcast && !force)
 			return;
 		
 		byte[] d;
@@ -291,7 +291,7 @@ public class RemoteRobotCommunicator : IRobotCommunicator,IDisposable {
 	}
 	public override void Update(float dt)
 	{
-		_SendData ();
+		_SendData (false);
 	}
 
 }

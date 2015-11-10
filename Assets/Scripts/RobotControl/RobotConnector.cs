@@ -177,8 +177,9 @@ public class RobotConnector:IDisposable{
 			return;
 		_robotIfo.Status = false;
 		RobotCommunicator.SetData("HeadRotation", Quaternion.identity.ToString(), false);
-		RobotCommunicator.Update(0);//only once
+		RobotCommunicator.SetData("Speed", Quaternion.identity.ToString(), false);
 		RobotCommunicator.ConnectRobot(false);
+		RobotCommunicator.Update(0);//only once
 
 	}
 
@@ -187,7 +188,7 @@ public class RobotConnector:IDisposable{
 		if (BaseController != null) {
 			_robotIfo.Speed = BaseController.GetSpeed ();
 			if (_robotIfo.Speed.x < 0)
-				_robotIfo.Speed *= 0.1f;
+				_robotIfo.Speed.x *= 0.1f;
 			_robotIfo.Rotation = BaseController.GetRotation ();
 		}
 		if (HeadController!=null) {

@@ -136,6 +136,9 @@ public class OVRCameraRig : MonoBehaviour
 			centerEyeAnchor.localPosition = 0.5f * (hmdLeftEye.position + hmdRightEye.position);
 			leftEyeAnchor.localPosition = monoscopic ? centerEyeAnchor.localPosition : hmdLeftEye.position;
 			rightEyeAnchor.localPosition = monoscopic ? centerEyeAnchor.localPosition : hmdRightEye.position;
+		} else {
+			leftEyeAnchor.localPosition = new Vector3(-0.032f,0,0);
+			rightEyeAnchor.localPosition = new Vector3(0.032f,0,0);
 		}
 		if (UpdatedAnchors != null)
 		{

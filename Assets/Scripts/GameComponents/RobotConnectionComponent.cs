@@ -16,7 +16,16 @@ public class RobotConnectionComponent : DependencyRoot {
 	bool _connected=false;
 	public int RobotIndex;
 
+	//incase we using PLC lock
+	public PLCDriverObject PLCDriverObject;
+
 	RobotInfo _RobotIP;
+	public RobotInfo RobotIP
+	{
+		get{
+			return _RobotIP;
+		}
+	}
 
 	float[] _RobotJointValues;
 
@@ -81,6 +90,7 @@ public class RobotConnectionComponent : DependencyRoot {
 		_connector.DataCommunicator.OnRobotInfoDetected += OnRobotInfoDetected;
 		_connector.DataCommunicator.OnRobotStatus += OnRobotStatus;
 		_connector.DataCommunicator.OnJointValues += OnJointValues;
+		_connector.DataCommunicator.OnBumpSensor += OnBumpSensor;
 
 		_connector.StartDataCommunicator ();
 		
@@ -114,11 +124,19 @@ public class RobotConnectionComponent : DependencyRoot {
 	void OnJointValues(float[] values)
 	{
 		_RobotJointValues = values;
+
+		if (PLCDriverObject != null) {
+			PLCDriverObject.OnJointValues(values);
+		}
 	}
 
 	void OnRobotStatus(RobotDataCommunicator.ERobotControllerStatus status)
 	{
 		_robotStatus = status;
+
+		if (PLCDriverObject != null) {
+			PLCDriverObject.OnRobotStatus(status);
+		}
 	}
 	void OnRobotInfoDetected(RobotInfo ifo)
 	{
@@ -126,28 +144,34 @@ public class RobotConnectionComponent : DependencyRoot {
 		if(_RobotIP==null)
 			_RobotIP = ifo;
 	}
+	void OnBumpSensor(float[] v)
+	{
+	}
+	
+	public void OnCameraFPS(int c0,int c1)
+	{
+		if (PLCDriverObject != null) {
+			PLCDriverObject.OnCameraFPS(c0,c1);
+		}
+	}
+
 	void OnDestroy()
 	{
 		_connector.Dispose();
 		_connector = null;
 	}
 
-	void Connect()
-	{
-		RobotInfo ifo=_RobotIP;
-		ConnectRobot(ifo);
-	}
 	// Update is called once per frame
 	void Update () {
 		_connector.NullValues = NullValues;
 		_connector.Update ();
 
-		if (Input.GetButtonDown ("ConnectRobot")) {
+		/*		if (Input.GetButtonDown ("ConnectRobot")) {
 			if(IsConnected)
 				DisconnectRobot();
 			else
 			{
-				Connect();
+				ConnectRobot();
 			}
 		}
 		if (IsConnected && Input.GetButtonDown ("StartRobot")) {
@@ -159,15 +183,19 @@ public class RobotConnectionComponent : DependencyRoot {
 		}
 		if (Input.GetButtonDown ("CalibrateRobot"))  {
 			_connector.Recalibrate();
-		}
+		}*/
 
 		if (IsConnected) {
 			_connector.SendData("query","",false);
 			_connector.SendData("jointVals","",false);
 		}
 	}
-
-
+	
+	public void ConnectRobot()
+	{
+		RobotInfo ifo=_RobotIP;
+		ConnectRobot(ifo);
+	}
 	public void ConnectRobot(RobotInfo r)
 	{
 		if (_connected) {
@@ -208,6 +236,7 @@ public class RobotConnectionComponent : DependencyRoot {
 	{
 		if (!_connected) 
 			return;
+		Recalibrate();
 		_connector.StartUpdate();
 		LogSystem.Instance.Log ("Start Updating Robot:" + _RobotIP.Name, LogSystem.LogType.Info);
 	}
@@ -218,6 +247,14 @@ public class RobotConnectionComponent : DependencyRoot {
 			return;
 		_connector.EndUpdate();
 		LogSystem.Instance.Log ("End Updating Robot:" + _RobotIP.Name, LogSystem.LogType.Info);
+	}
+	public bool IsRobotStarted()
+	{
+		return _connected && _connector.IsRobotConnected;
+	}
+	public void Recalibrate()
+	{
+		_connector.Recalibrate ();
 	}
 
 }

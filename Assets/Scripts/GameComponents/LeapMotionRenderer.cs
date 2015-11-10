@@ -9,6 +9,7 @@ public class LeapMotionRenderer : MonoBehaviour {
 
 	GameObject _Hands;
 	public bool IsActive=true;
+	public float SizeFactor=1.0f;
 
 	public LeapImageRetriever[] LeapRetrival
 	{
@@ -69,6 +70,8 @@ public class LeapMotionRenderer : MonoBehaviour {
 			_Hands.GetComponent<MeshRenderer>().enabled=false;
 			return;
 		}
+
+		_Hands.transform.localScale = new Vector3 (SizeFactor, SizeFactor, SizeFactor);
 		if (c.IsConnected() == false) {
 			_Hands.GetComponent<MeshRenderer>().enabled=false;
 			return;

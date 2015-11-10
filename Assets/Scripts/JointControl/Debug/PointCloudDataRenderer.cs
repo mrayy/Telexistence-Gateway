@@ -8,7 +8,7 @@ using System.Collections.Generic;
 public class PointCloudDataRenderer : MonoBehaviour {
 	public string FileName;
 	public string TagName;
-
+	public Color PointsColor;
 
 	// Use this for initialization
 	void Start () {
@@ -46,7 +46,7 @@ public class PointCloudDataRenderer : MonoBehaviour {
 		for(int i=0;i<vertCount;++i)
 		{
 			indecies[i]=i;
-			//colors[i]=new Color(1,1,1,1);
+			colors[i]=PointsColor;//new Color(1,1,1,1);
 		}
 		mesh.vertices = positions.ToArray();
 		mesh.colors = colors.ToArray();

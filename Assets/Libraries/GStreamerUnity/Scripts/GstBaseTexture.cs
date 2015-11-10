@@ -28,7 +28,11 @@ public abstract class GstBaseTexture : MonoBehaviour {
 
 	protected abstract void _initialize ();
 	public abstract IGstPlayer GetPlayer();
-	
+
+
+	public delegate void Delg_OnFrameGrabbed(Texture2D texture,int index);
+	public event Delg_OnFrameGrabbed OnFrameGrabbed;
+
 	public Texture2D[] PlayerTexture
 	{
 		get
@@ -56,6 +60,8 @@ public abstract class GstBaseTexture : MonoBehaviour {
 	public void OnFrameCaptured(int index)
 	{
 		m_fpsHelper [index].AddFrame ();
+		if (OnFrameGrabbed != null)
+			OnFrameGrabbed (m_Texture [index],index);
 	}
 
 

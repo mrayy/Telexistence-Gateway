@@ -25,6 +25,7 @@ public class CameraConfigurations  {
 	public Vector2 PixelShiftRight= Vector2.zero;
 	public float Focal=1;
 	public ECameraRotation[] Rotation=new ECameraRotation[2];
+	public bool FlipXAxis=false;
 
 	/*
 	//http://docs.opencv.org/doc/tutorials/calib3d/camera_calibration/camera_calibration.html
