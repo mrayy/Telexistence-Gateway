@@ -7,30 +7,38 @@ public class PLCDriver  {
 	
 	public enum ETorsoDataField
 	{
-		J1RT,
-		J2RT,
-		J3RT,
-		J4RT,
-		J5RT,
-		J6RT,
-		J1IK,
-		J2IK,
-		J3IK,
-		J4IK,
-		J5IK,
-		J6IK,
-		J1TQ,
-		J2TQ,
-		J3TQ,
-		J4TQ,
-		J5TQ,
-		J6TQ,
-		IMURoll,
-		IMUPitch,
-		IMUYaw,
-		Status,
-		CameraFPS,
-		Collision
+		status,
+		userConnected,
+		robotConnected,
+		overCurrent,
+		cameraFPS,
+		oculusFPS,
+		J1_rt_angle,
+		J2_rt_angle,
+		J3_rt_disp,
+		J4_rt_angle,
+		J5_rt_angle,
+		J6_rt_angle,
+		J1_ik_angle,
+		J2_ik_angle,
+		J3_ik_disp,
+		J4_ik_angle,
+		J5_ik_angle,
+		J6_ik_angle,
+		J1_current,
+		J2_current,
+		J3_current,
+		J4_current,
+		J5_current,
+		J6_current,
+		J1_torque,
+		J2_torque,
+		J3_torque,
+		J4_torque,
+		J5_torque,
+		J6_torque,
+		unused,
+		collisionYBM
 	};
 	
 	
@@ -39,34 +47,101 @@ public class PLCDriver  {
 		terminal,
 		offline,
 		inOperation,
-		traverse,
-		subcraler,
+		inTraverse,
+		subcrawler,
 		offroad,
-		mainCrwlMtrRight,
-		mainCrwlMtrLeft,
-		mainCrwlRightRot,
-		mainCrwlLeftRot,
-		subCrwlPrevAngRight,
-		subCrwlPrevAngLeft,
-		subCrwlCurrAngRight,
-		subCrwlCurrAngLeft,
-		frontAngle,
-		sideAngle,
-		rightTraverse,
-		leftTraverse,
+		mainCrwlRightRPM,
+		mainCrwlLeftRPM,
+		mainCrwlRightRotDir,
+		mainCrwlLeftRotDir,
+		subCrwlFrontRight,
+		subCrwlFrontLeft,
+		subCrwlBackRight,
+		subCrwlBackLeft,
+		pitch,
+		roll,
+		traverseRight,
+		traverseLeft,
 		battVoltage,
 		battCurrent,
-		inForwardDir,
-		inTraverseControl,
-		maxSpeed,
-		traverseSpeed,
+		forwardControlMode,
+		traverseControlMode,
+		mainCrwlSpeedLimit,
+		subCrwlSpeedLimit,
 		maxTempLeft,
 		maxTempRight,
 		unused0,
 		HealthCheckCount,
 	};
+	
+	public enum EYbmDataField
+	{
+		currentDepth,
+		currentLoad,
+		currentHtCount,
+		currentSoil,
+		currentTime,
+		comments,
+		water_pressure,
+		penitrationSound,
+		Nvalue,
+		surveyNo,
+		measurementNo,
+		unused1,
+		remainRecData,
+		ybmBattVoltage,
+		ybmBattCurrent,
+		rotMotInsCurrent,
+		feedMotInsCurrent,
+		operatingTime,
+		baseRoll,
+		basePitch,
+		rodPitch,
+		rodRoll,
+		rodRaised,
+		communicationCount,
+		feedRise,
+		feedModeSwitching,
+		feedModeManual,
+		FeedModeAuto,
+		feedDown,
+		inManualMode,
+		unused2,
+		load25kgDropped,
+		load50kgDropped,
+		load75kDropped,
+		load100kgDropped,
+		rotation,
+		rotationSwitching,
+		rodModeManual,
+		rodHalfRotation,
+		unused3,
+		testContRotation,
+		testHalfTurn,
+		rodStarted,
+		rodStopped,
+		inverterON,
+		chuckOpen,
+		chuckClose,
+		clampOpen,
+		clampClose,
+		graspSortButton,
+		rodCuttingOp1,
+		rodCuttingOp2,
+		rodCuttingOp3,
+		rodCuttingOp4,
+		emgStop,
+		testStarted
+	};
 
 	
+	public enum ECommonDataField {		
+		batteryCurrent,
+		battertVoltage,
+		commonUnused,
+		rssi_base,
+		rssi_robot
+	};
 	internal const string DllName = "PLCUnityPlugin";
 	
 	
@@ -94,6 +169,8 @@ public class PLCDriver  {
 	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
 	extern static private uint PLCGetTorsoUInt(IntPtr driver,int data);
 	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
+	extern static private int PLCGetTorsoInt(IntPtr driver,int data);
+	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
 	extern static private ushort PLCGetTorsoUShort(IntPtr driver,int data);
 	
 	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
@@ -104,7 +181,20 @@ public class PLCDriver  {
 	extern static private uint PLCGetXyrisUInt(IntPtr driver,int data);
 	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
 	extern static private ushort PLCGetXyrisUShort(IntPtr driver,int data);
+	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
+	extern static private short PLCGetXyrisShort(IntPtr driver,int data);
 
+	
+	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
+	extern static private short PLCGetCommonShort(IntPtr driver,int data);
+	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
+	extern static private ushort PLCGetCommonUShort(IntPtr driver,int data);
+
+	
+	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
+	extern static private  byte PLCGetYbmUChar(IntPtr driver,int data);
+	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
+	extern static private ushort PLCGetYbmUShort(IntPtr driver,int data);
 
 	IntPtr _instance;
 
@@ -153,7 +243,11 @@ public class PLCDriver  {
 	{
 		return PLCGetTorsoUInt (_instance, (int)data);
 	}
-	public uint GetTorsoUShort(ETorsoDataField data)
+	public int GetTorsoInt(ETorsoDataField data)
+	{
+		return PLCGetTorsoInt (_instance, (int)data);
+	}
+	public ushort GetTorsoUShort(ETorsoDataField data)
 	{
 		return PLCGetTorsoUShort (_instance, (int)data);
 	}
@@ -166,6 +260,29 @@ public class PLCDriver  {
 	public ushort GetXyrisUShort(EXyrisDataField data)
 	{
 		return PLCGetXyrisUShort (_instance, (int)data);
+	}
+	public short GetXyrisShort(EXyrisDataField data)
+	{
+		return PLCGetXyrisShort (_instance, (int)data);
+	}
+	
+	public ushort GetYBMUShort(EYbmDataField data)
+	{
+		return PLCGetYbmUShort (_instance, (int)data);
+	}
+	public byte GetYBMUChar(EYbmDataField data)
+	{
+		return PLCGetYbmUChar (_instance, (int)data);
+	}
+
+	
+	public ushort GetCommonUShort(ECommonDataField data)
+	{
+		return PLCGetCommonUShort (_instance, (int)data);
+	}
+	public short GetCommonShort(ECommonDataField data)
+	{
+		return PLCGetCommonShort (_instance, (int)data);
 	}
 
 	public void ReadData()

@@ -28,6 +28,17 @@ public static class OVRUnityVersionChecker
 		}
 	}
 
+    /// <summary>
+    /// If true, Unity has built-in VR support and is incompatible with this legacy integration.
+    /// </summary>
+    public static bool hasBuiltInVR
+    {
+        get
+        {
+            return (version >= "5.1.0b1");
+        }
+    }
+
 	/// <summary>
 	/// If true, Unity can use OculusInitPlugin instead of _DirectToRift.exe.
 	/// </summary>
@@ -67,6 +78,21 @@ public static class OVRUnityVersionChecker
 				|| (version >= "5.0.0b1" && version < "5.0.0b19");
 
 			return !isUnsupportedUnityVersion;
+		}
+	}
+	
+	/// <summary>
+	/// If true, Unity supports VR rendering in the editor.
+	/// </summary>
+	public static bool hasEditorVRSupport
+	{
+		get
+		{
+#if UNITY_STANDALONE_WIN
+			return version >= "4.6.7p4";
+#else
+			return true;
+#endif
 		}
 	}
 }

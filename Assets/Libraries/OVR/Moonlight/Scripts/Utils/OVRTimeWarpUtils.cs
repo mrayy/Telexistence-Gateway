@@ -33,16 +33,16 @@ public class OVRTimeWarpUtils
 
 	public enum DebugPerfMode
 	{
-		DEBUG_PERF_OFF,         // data still being collected, just not displayed
-		DEBUG_PERF_RUNNING,     // display continuously changing graph
-		DEBUG_PERF_FROZEN,      // no new data collection, but displayed
+		DEBUG_PERF_OFF = 0,         // data still being collected, just not displayed
+		DEBUG_PERF_RUNNING = 1,     // display continuously changing graph
+		DEBUG_PERF_FROZEN = 2,      // no new data collection, but displayed
 		DEBUG_PERF_MAX,
 	}
 
 	public enum DebugPerfValue
 	{
-		DEBUG_VALUE_DRAW,       // start and end times of the draw
-		DEBUG_VALUE_LATENCY,    // seconds from eye buffer orientation time
+		DEBUG_VALUE_DRAW = 0,       // display the start and end times of the draw
+		DEBUG_VALUE_LATENCY = 1,    // display the latency times (seconds from eye buffer orientation time)
 		DEBUG_VALUE_MAX,
 	}
 

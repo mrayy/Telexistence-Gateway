@@ -153,10 +153,17 @@ public class OVRGamepadController : MonoBehaviour
 	/// </summary>
     public static string[] ButtonNames = null;
 
+#if !UNITY_ANDROID || UNITY_EDITOR
     private static int lastGPCRefresh = 0;
+    private static bool isMapped = true;
+#endif
 
     static OVRGamepadController()
     {
+		Debug.Log("OVRGamepadController has been deprecated and will be removed in a future release. Please migrate to OVRInput. "
+				+ "Refer to the documentation here for more information: "
+				+ "https://developer.oculus.com/documentation/game-engines/latest/concepts/unity-ovrinput/");
+
 #if UNITY_ANDROID && !UNITY_EDITOR
         SetAxisNames(AndroidAxisNames);
         SetButtonNames(AndroidButtonNames);
@@ -257,7 +264,14 @@ public class OVRGamepadController : MonoBehaviour
 		return Input.GetAxis(AxisNames[(int)axis]);
 #else
         float xinputValue = OVR_GamepadController_GetAxis((int)axis);
-        float unityValue = Input.GetAxis(AxisNames[(int)axis]);
+
+        float unityValue = 0f;
+        if (isMapped)
+        {
+            try { unityValue = Input.GetAxis(AxisNames[(int)axis]); }
+            catch { isMapped = false; }
+        }
+
         return Mathf.Abs(xinputValue) > Mathf.Abs(unityValue) ? xinputValue : unityValue;
 #endif
 	}
@@ -289,7 +303,15 @@ public class OVRGamepadController : MonoBehaviour
         {
             GPC_Update();
         }
-		return OVR_GamepadController_GetButton((int)button) || Input.GetButton(ButtonNames[(int)button]);
+
+        bool unityValue = false;
+        if (isMapped)
+        {
+            try { unityValue = Input.GetButton(ButtonNames[(int)button]); }
+            catch { isMapped = false; }
+        }
+
+		return OVR_GamepadController_GetButton((int)button) || unityValue;
 #endif
 	}
 
@@ -324,6 +346,30 @@ public class OVRGamepadController : MonoBehaviour
 	public static void SetReadButtonDelegate(ReadButtonDelegate del)
 	{
 		ReadButton = del;
+	}
+
+	/// <summary>
+	/// Sets the current vibration for a VR node.
+	/// </summary>
+	/// <param name="node">
+	/// The node where the vibration will be applied, if possible.
+	/// </para>
+	/// <param name="strength">
+	/// The strength of the vibration, where 0 none and 1 is the maximum possible.
+	/// </param>
+	/// <param name="frequency">
+	/// The frequency of the vibration in Hertz, if applicable.
+	/// </param>
+	public static bool GPC_SetVibration(UnityEngine.VR.VRNode node, float strength, float frequency)
+	{
+#if !UNITY_ANDROID || UNITY_EDITOR
+		return OVR_GamepadController_SetVibration((int)node, strength, frequency);
+#else
+        if (strength > 0.5f)
+            Handheld.Vibrate();
+
+        return true;
+#endif
 	}
 
 	/// <summary>
@@ -377,18 +423,20 @@ public class OVRGamepadController : MonoBehaviour
 		GPC_Available = false;
 	}
 
-	public const string LibOVR = "OculusPlugin";
+	public const string DllName = "OVRGamepad";
 	
-	[DllImport(LibOVR, CallingConvention = CallingConvention.Cdecl)]
+	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
 	public static extern bool OVR_GamepadController_Initialize();
-	[DllImport(LibOVR, CallingConvention = CallingConvention.Cdecl)]
+	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
 	public static extern bool OVR_GamepadController_Destroy();
-	[DllImport(LibOVR, CallingConvention = CallingConvention.Cdecl)]
+	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
 	public static extern bool OVR_GamepadController_Update();
-	[DllImport(LibOVR, CallingConvention = CallingConvention.Cdecl)]
+	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
 	public static extern float OVR_GamepadController_GetAxis(int axis);
-	[DllImport(LibOVR, CallingConvention = CallingConvention.Cdecl)]
+	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
 	public static extern bool OVR_GamepadController_GetButton(int button);
+	[DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
+    public static extern bool OVR_GamepadController_SetVibration(int node, float strength, float frequency);
 #endif
     void LateUpdate()
     {

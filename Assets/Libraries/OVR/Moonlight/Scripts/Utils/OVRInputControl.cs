@@ -20,8 +20,10 @@ limitations under the License.
 ************************************************************************************/
 
 using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Assertions;
 
 /// <summary>
 /// Cross-platform wrapper for Unity Input.
@@ -53,6 +55,11 @@ public static class OVRInputControl
 	/// Set 'true' to allow keyboard input (will be set 'false' on some platforms).
 	/// </summary>
 	private	static bool	allowKeyControls = true;
+
+	/// <summary>
+	/// If true, prints information about each input event to the log.
+	/// </summary>
+	public static bool verbose = false;
 
 	public delegate void OnKeyUp(MonoBehaviour comp);
 	public delegate void OnKeyDown(MonoBehaviour comp);
@@ -217,7 +224,8 @@ public static class OVRInputControl
 	/// </summary>
 	private static void Init_Windows()
 	{
-		OVRDebugUtils.Print("Initializing input for Windows.");
+		if (verbose)
+			Debug.Log("Initializing input for Windows.");
 		allowKeyControls = false;
 		platformPrefix = "Win:";
 	}
@@ -227,7 +235,8 @@ public static class OVRInputControl
 	/// </summary>
 	private static void Init_Windows_Editor()
 	{
-		OVRDebugUtils.Print("Initializing input for Windows Editor.");
+		if (verbose)
+			Debug.Log("Initializing input for Windows Editor.");
 		allowKeyControls = true;
 		platformPrefix = "Win:";
 	}
@@ -237,7 +246,8 @@ public static class OVRInputControl
 	/// </summary>
 	private static void Init_Android()
 	{
-		OVRDebugUtils.Print("Initializing input for Android.");
+		if (verbose)
+			Debug.Log("Initializing input for Android.");
 		allowKeyControls = true;
 		platformPrefix = "Android:";
 	}
@@ -247,7 +257,8 @@ public static class OVRInputControl
 	/// </summary>
 	private static void Init_OSX()
 	{
-		OVRDebugUtils.Print("Initializing input for OSX.");
+		if (verbose)
+			Debug.Log("Initializing input for OSX.");
 		allowKeyControls = false;
 		platformPrefix = "OSX:";
 	}
@@ -257,7 +268,8 @@ public static class OVRInputControl
 	/// </summary>
 	private static void Init_OSX_Editor()
 	{
-		OVRDebugUtils.Print("Initializing input for OSX Editor.");
+		if (verbose)
+			Debug.Log("Initializing input for OSX Editor.");
 		allowKeyControls = true;
 		platformPrefix = "OSX:";
 	}
@@ -267,7 +279,8 @@ public static class OVRInputControl
 	/// </summary>
 	private static void Init_iPhone()
 	{
-		OVRDebugUtils.Print("Initializing input for iPhone.");
+		if (verbose)
+			Debug.Log("Initializing input for iPhone.");
 		allowKeyControls = false;
 		platformPrefix = "iPhone:";
 	}
@@ -277,6 +290,10 @@ public static class OVRInputControl
 	/// </summary>
 	static OVRInputControl()
 	{
+		Debug.Log("OVRInputControl has been deprecated and will be removed in a future release. Please migrate to OVRInput. "
+				+ "Refer to the documentation here for more information: "
+				+ "https://developer.oculus.com/documentation/game-engines/latest/concepts/unity-ovrinput/");
+
 #if UNITY_ANDROID && !UNITY_EDITOR
 		OVRGamepadController.SetReadAxisDelegate(ReadJoystickAxis);
 		OVRGamepadController.SetReadButtonDelegate(ReadJoystickButton);
@@ -306,7 +323,8 @@ public static class OVRInputControl
 		string[] joystickNames = Input.GetJoystickNames();
 		for (int i = 0; i < joystickNames.Length; ++i)
 		{
-			OVRDebugUtils.Print("Found joystick '" + joystickNames[i] + "'...");
+			if (verbose)
+				Debug.Log("Found joystick '" + joystickNames[i] + "'...");
 		}
 	}
 
@@ -406,7 +424,8 @@ public static class OVRInputControl
 	/// </summary>
 	public static float ReadJoystickAxis(OVRGamepadController.Axis axis)
 	{
-		//OVRDebugUtils.Print("OVRInputControl.ReadJoystickAxis");
+		//if (verbose)
+			//Debug.Log("OVRInputControl.ReadJoystickAxis");
 		return GetJoystickAxis(1, axis);
 	}
 
@@ -433,7 +452,8 @@ public static class OVRInputControl
 	public static bool GetJoystickButton(int joystickNumber, OVRGamepadController.Button button)
 	{
 		string fullName = platformPrefix + "Joy " + joystickNumber + ":" + OVRGamepadController.ButtonNames[(int)button];
-		//OVRDebugUtils.Print("Checking button " + fullName);
+		//if (verbose)
+			//Debug.Log("Checking button " + fullName);
 		return Input.GetButton(fullName);
 	}
 
@@ -443,7 +463,8 @@ public static class OVRInputControl
 	/// </summary>
 	public static bool ReadJoystickButton(OVRGamepadController.Button button)
 	{
-		//OVRDebugUtils.Print("OVRInputControl.ReadJoystickButton");
+		//if (verbose)
+			//Debug.Log("OVRInputControl.ReadJoystickButton");
 		return GetJoystickButton(1, button);
 	}
 
@@ -468,7 +489,8 @@ public static class OVRInputControl
 			float v = Input.GetAxis(axisName);
 			if (Mathf.Abs(v) > 0.2f)
 			{
-				OVRDebugUtils.Print("Test Axis " + i + ": v = " + v);
+				if (verbose)
+					Debug.Log("Test Axis " + i + ": v = " + v);
 			}
 		}
 	}
@@ -484,7 +506,8 @@ public static class OVRInputControl
 			string buttonName = "Test Button " + i;
 			if (Input.GetButton(buttonName))
 			{
-				OVRDebugUtils.Print("Test Button " + i + " is down.");
+				if (verbose)
+					Debug.Log("Test Button " + i + " is down.");
 			}
 		}
 	}
@@ -499,7 +522,7 @@ public static class OVRInputControl
 			InputMapping im = inputMap[i];
 			if (im.component == comp && im.joystickNumber == joystickNumber)
 			{
-				OVRDebugUtils.Assert(false, "Input mapping already exists!");
+				Assert.IsTrue(false, "Input mapping already exists!");
 				return;
 			}
 		}
@@ -559,7 +582,8 @@ public static class OVRInputControl
 			KeyInfo keyInfo = keyInfos[i];
 			if (keyInfo.deviceType == DeviceType.Gamepad)
 			{
-				//OVRDebugUtils.Print("Checking gamepad button " + keyInfo.KeyName);
+				//if (verbose)
+					//Debug.Log("Checking gamepad button " + keyInfo.KeyName);
 				keyDown = GetJoystickButton(joystickNumber, keyInfo.joystickButton);
 			}
 			else if (keyInfo.deviceType == DeviceType.Axis)
@@ -593,7 +617,8 @@ public static class OVRInputControl
 				if (!keyInfo.wasDown)
 				{
 					// key was just pressed
-					//OVRDebugUtils.Print( "Key or Button down: " + keyInfo.KeyName );
+					//if (verbose)
+						//Debug.Log( "Key or Button down: " + keyInfo.KeyName );
 					keyInfo.downHandler(comp);
 				}
 				else
