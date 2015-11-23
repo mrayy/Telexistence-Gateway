@@ -6,22 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Libraries/Universe/Scene/00 - Universe.unity
+    path: Assets/Projects/NEDO/Scenes/HMD.unity
   - enabled: 0
-    path: Assets/Scenes/MainMenu.unity
-  - enabled: 0
-    path: Assets/Scenes/RobotConnect.unity
-  - enabled: 0
-    path: Assets/Scenes/RobotConnect.unity
-  - enabled: 0
-    path: Assets/Projects/Simulator/Tests/RobotBody.unity
-  - enabled: 0
-    path: Assets/Scenes/NEDO_DEMO.unity
-  - enabled: 0
-    path: Assets/Scenes/TORSO_Demo.unity
-  - enabled: 0
-    path: Assets/Scenes/TelubeeHands.unity
-  - enabled: 0
-    path: Assets/Scenes/TPACDemo.unity
-  - enabled: 0
-    path: Assets/Scenes/simulator_view.unity
+    path: Assets/Projects/NEDO/Scenes/Simulator_Viewer.unity
+  - enabled: 1
+    path: Assets/Projects/NEDO/Scenes/GNSS_Viewer.unity

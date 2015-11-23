@@ -10,8 +10,8 @@ PlayerSettings:
   targetResolution: 0
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: NEDO Obayashi
-  productName: Simulator
+  companyName: NEDOxKMD
+  productName: GNSS Viewer
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_ShowUnitySplashScreen: 1
@@ -91,7 +91,7 @@ PlayerSettings:
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
-  virtualRealitySupported: 1
+  virtualRealitySupported: 0
   productGUID: ba13cb22f46b7474fb917b2b4102d218
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
@@ -164,7 +164,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: 8e5da9543242ee64badd4e16854ad3b6, type: 3}
       m_Width: 128
       m_Height: 128
   m_BuildTargetBatching:

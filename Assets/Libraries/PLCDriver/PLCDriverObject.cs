@@ -153,7 +153,10 @@ public class PLCDriverObject : MonoBehaviour {
 
 	public Vector2 GetGPSLocation()
 	{
-		return new Vector2(
+		Vector2 ret = new Vector2 (0, 0);
+		ret.x = ((float)_driver.GetTorsoUShort (PLCDriver.ETorsoDataField.cameraFPS)) / 1000.0f;
+		ret.y = ((float)_driver.GetTorsoUShort (PLCDriver.ETorsoDataField.oculusFPS)) / 1000.0f;
+		return ret;
 	}
 
 	public void OnRobotStatus(RobotDataCommunicator.ERobotControllerStatus status)

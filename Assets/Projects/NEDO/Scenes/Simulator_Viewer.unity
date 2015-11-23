@@ -580,7 +580,7 @@ MonoBehaviour:
   Width: 480
   Height: 270
   alwaysTop: 1
-  WindowName: 
+  TargetGroupName: Simulator
 --- !u!114 &778646070
 MonoBehaviour:
   m_ObjectHideFlags: 0

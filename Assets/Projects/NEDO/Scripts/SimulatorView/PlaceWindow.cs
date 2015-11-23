@@ -46,7 +46,7 @@ public class PlaceWindow : MonoBehaviour {
 	static extern IntPtr GetForegroundWindow ();
 	#endif
 
-	public string WindowName;
+	public string TargetGroupName;
 
 	System.IntPtr hWnd;
 	WindowHandler _handler;
@@ -54,11 +54,11 @@ public class PlaceWindow : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//WindowHandler _handler=new WindowHandler();
-		x_top=int.Parse(Settings.Instance.GetValue ("Simulator", "X", x_top.ToString ()));
-		y_left=int.Parse(Settings.Instance.GetValue ("Simulator", "Y", y_left.ToString ()));
+		x_top=int.Parse(Settings.Instance.GetValue (TargetGroupName, "X", x_top.ToString ()));
+		y_left=int.Parse(Settings.Instance.GetValue (TargetGroupName, "Y", y_left.ToString ()));
 		
-		Width=int.Parse(Settings.Instance.GetValue ("Simulator", "Width", Width.ToString ()));
-		Height=int.Parse(Settings.Instance.GetValue ("Simulator", "Height", Height.ToString ()));
+		Width=int.Parse(Settings.Instance.GetValue (TargetGroupName, "Width", Width.ToString ()));
+		Height=int.Parse(Settings.Instance.GetValue (TargetGroupName, "Height", Height.ToString ()));
 		#if UNITY_EDITOR
 			
 		#else
